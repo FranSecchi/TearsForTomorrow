@@ -11,12 +11,11 @@ public class ConversationTrigger : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        StartDialogue();
+        manager.StartConversation(NewConversation, transform.parent.gameObject);
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        manager.FinishConversation();
     }
 
-    private void StartDialogue()
-    {
-        Debug.Log("entered");
-        manager.StartConversation(NewConversation, gameObject);
-    }
 }

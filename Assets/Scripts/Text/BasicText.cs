@@ -11,7 +11,7 @@ public class BasicText : LocalizedText
     {
         _text = GetComponent<TextMeshProUGUI>();
     }
-    protected override void Initialize()
+    private void Start()
     {
         _text.text = GetText(Key);
     }

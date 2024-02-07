@@ -4,38 +4,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class DialogueManager : LocalizedText
+public abstract class DialogueManager : LocalizedText
 {
     //Definir botons al GameObject amb aquest Script per escollir opcions
     public GameObject DialoguePanel;
     public TextMeshProUGUI Name;
     public TextMeshProUGUI Speech;
     public TextMeshProUGUI[] Options;
-
-    private Animator panelAnimator;
+    private GameObject talking;
     private DialogueNode currentNode;
-    private GameObject talker;
-
-    protected override void Initialize()
+    private void Start()
     {
-        panelAnimator = DialoguePanel.GetComponent<Animator>();
-        for (int i = 0; i < Options.Length; i++)
-        {
-
-            Options[i].transform.parent.gameObject.SetActive(false);
-        }
-        HideDialogue();
+        Initialize();
     }
-    private void ShowDialogue()
-    {
-        //DialoguePanel.SetActive(true);
-        panelAnimator.SetBool("Show", true);
-    }
-    private void HideDialogue()
-    {
-        panelAnimator.SetBool("Show", false);
-        //DialoguePanel.SetActive(false);
-    }
+    protected abstract void Initialize();
+    protected abstract void ShowDialogue();
+    protected abstract void HideDialogue();
 
     public void OptionChosen(int option)
     {
@@ -55,13 +39,17 @@ public class DialogueManager : LocalizedText
 
     private void DoEndNode(EndNode endNode)
     {
-        endNode.OnChosen(talker);
+        endNode.OnChosen(talking);
         HideDialogue();
     }
 
-    internal void StartConversation(Conversation newConversation, GameObject talking)
+    internal void FinishConversation()
     {
-        talker = talking;
+        HideDialogue();
+    }
+    internal void StartConversation(Conversation newConversation, GameObject talker)
+    {
+        talking = talker;
         currentNode = newConversation.StartNode;
         Name.text = newConversation.Name;
         SetText(currentNode);

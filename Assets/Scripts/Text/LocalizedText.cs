@@ -17,14 +17,7 @@ public abstract class LocalizedText : MonoBehaviour
     {
         Localizator.OnLanguageChangeDelegate -= OnLanguageChanged;
     }
-
-
-    private void Start()
-    {
-        Initialize();
-    }
     protected abstract void OnLanguageChanged();
-    protected abstract void Initialize();
     protected string GetText(string textKey)
     {
         return Localizator.GetText(textKey);
