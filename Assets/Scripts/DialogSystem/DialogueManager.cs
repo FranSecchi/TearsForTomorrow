@@ -12,11 +12,13 @@ public class DialogueManager : LocalizedText
     public TextMeshProUGUI Speech;
     public TextMeshProUGUI[] Options;
 
+    private Animator panelAnimator;
     private DialogueNode currentNode;
     private GameObject talker;
 
     protected override void Initialize()
     {
+        panelAnimator = DialoguePanel.GetComponent<Animator>();
         for (int i = 0; i < Options.Length; i++)
         {
 
@@ -26,11 +28,13 @@ public class DialogueManager : LocalizedText
     }
     private void ShowDialogue()
     {
-        DialoguePanel.SetActive(true);
+        //DialoguePanel.SetActive(true);
+        panelAnimator.SetBool("Show", true);
     }
     private void HideDialogue()
     {
-        DialoguePanel.SetActive(false);
+        panelAnimator.SetBool("Show", false);
+        //DialoguePanel.SetActive(false);
     }
 
     public void OptionChosen(int option)

@@ -7,10 +7,8 @@ public class ConversationTrigger : MonoBehaviour
 {
     public Conversation NewConversation;
     public DialogueManager manager;
-    private void Start()
-    {
-        StartDialogue();
-    }
+    
+    
     private void OnTriggerEnter(Collider other)
     {
         StartDialogue();
