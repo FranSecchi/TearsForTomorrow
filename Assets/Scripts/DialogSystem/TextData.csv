@@ -1,5 +1,13 @@
-Key;English;Catalan;Spanish;
-Start;Start;Començar;Empezar;
-Music;Music;Musica;Musica;
-Welcome;Welcome to this crazy hotel!;Benvinguts a aquest hotel de bojos!; Bienvenidos a este hotel de locos!;
-Finish;The End!;Final!;Fin!;
+Key;English;Catalan;Spanish
+Start;Start;Començar;Empezar
+Music;Music;Musica;Musica
+Welcome;Welcome to this crazy hotel!;Benvinguts a aquest hotel de bojos!; Bienvenidos a este hotel de locos!
+Finish;The End!;Final!;Fin!
+Recep_00;Hi, im the recep;Hola, soc el recep;Hola, soy el recep
+Recep_Opt1;Salute;Bones;Saludar
+Recep_01;How are u;Com estas;Que tal
+Recep_02;I'll show u the hotel;T'ensenyo l'hotel;Te enseño el hotel
+Recep_Opt2;Show me the hotel;Mostram l'hotel;Muestrame el  hotel
+Ok;Okey;D'acord;Vale
+Fine;Fine;Be;Bien
+Bye;Bye;Adeu;Adios

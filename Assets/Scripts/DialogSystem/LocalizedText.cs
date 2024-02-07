@@ -7,8 +7,6 @@ using TMPro;
 
 public abstract class LocalizedText : MonoBehaviour
 {
-    private TextMeshProUGUI _text;
-    public string TextKey;
     // Start is called before the first frame update
     private void OnEnable()
     {
@@ -20,23 +18,16 @@ public abstract class LocalizedText : MonoBehaviour
         Localizator.OnLanguageChangeDelegate -= OnLanguageChanged;
     }
 
-    private void OnLanguageChanged()
-    {
-        SetText();
-    }
 
-    void Awake()
-    {
-        _text = GetComponent<TextMeshProUGUI>();
-    }
     private void Start()
     {
         Initialize();
     }
+    protected abstract void OnLanguageChanged();
     protected abstract void Initialize();
-    protected void SetText()
+    protected string GetText(string textKey)
     {
-        _text.text = Localizator.GetText(TextKey);
+        return Localizator.GetText(textKey);
     }
 
     

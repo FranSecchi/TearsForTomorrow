@@ -54,7 +54,7 @@ public class Localizator : MonoBehaviour
 
     void AddNewDataEntry(string s)
     {
-        //Debug.Log(s);
+        Debug.Log(s);
         string[] t = s.Split(new char[] { ';' });
         var languageData = new LanguageData(t); 
         if (Data == null)
