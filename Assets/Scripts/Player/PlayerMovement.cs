@@ -24,58 +24,57 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //In case player is clicking buttons, UI...
         if (EventSystem.current.IsPointerOverGameObject())
             return;
-        if (interacting)
-        {
-            CheckInteract();
-        }
-        else
-            MouseInput();
-    }
-
-    private void CheckInteract()
-    {
-        Debug.Log("interacting");
-        if (Vector3.Distance(transform.position, dest) < 0.1f)
-        {
-            Debug.Log("in pos");
-            interactWith.Interact(true);
-            interacting = false;
-        }
+        MouseInput();
     }
 
     private void MouseInput()
     {
+        if(interacting)
+            CheckInteract();
         if (Input.GetMouseButtonDown(0))
         {
             Ray myRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitInfo;
-            if(interactWith != null)
-            {
-                interactWith.Interact(false);
-                interactWith = null;
-            }
             if(Physics.Raycast(myRay, out hitInfo, 100, whatCanBeClickedOn))
             {
-                GameObject hit = hitInfo.collider.gameObject;
-                Debug.Log(hit);
-                dest = transform.position;
-                switch (hit.layer)
-                {
-                    case 3:
-                        dest = hitInfo.point;
-                        break;
-                    case 6:
-                        dest = hit.transform.GetChild(0).position;
-                        interacting = true;
-                        interactWith = hit.GetComponent<Interactuable>();
-                        break;
-                    default:
-                        break;
-                }
-                agent.SetDestination(dest);
+                HandleClick(hitInfo);
             }
+        }
+    }
+
+    private void HandleClick(RaycastHit hitInfo)
+    {
+        if (interactWith != null)
+        {
+            interactWith.Interact(false);
+            interactWith = null;
+        }
+        GameObject hit = hitInfo.collider.gameObject;
+        dest = transform.position;
+        switch (hit.layer)
+        {
+            case 3: //ground
+                dest = hitInfo.point;
+                interacting = false;
+                break;
+            case 6: //interactuable
+                dest = hit.transform.GetChild(0).position;
+                interacting = true;
+                interactWith = hit.GetComponent<Interactuable>();
+                break;
+            default:
+                break;
+        }
+        agent.SetDestination(dest);
+    }
+    private void CheckInteract()
+    {
+        if (Vector3.Distance(transform.position, dest) < 0.1f)
+        {
+            interactWith.Interact(true);
         }
     }
 }

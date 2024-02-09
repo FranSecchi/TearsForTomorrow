@@ -5,13 +5,13 @@ using UnityEngine;
 public class ConversationInteract : MonoBehaviour,Interactuable
 {
     public Conversation NewConversation;
-    public DialogueManager manager;
+    public DialogueManager DialogueManager;
 
     public void Interact(bool activate)
     {
         if (activate)
-            manager.StartConversation(NewConversation, gameObject);
+            DialogueManager.StartConversation(NewConversation, gameObject);
         else
-            manager.FinishConversation();
+            DialogueManager.FinishConversation();
     }
 }

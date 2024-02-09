@@ -6,16 +6,16 @@ using UnityEngine;
 public class ConversationTrigger : MonoBehaviour
 {
     public Conversation NewConversation;
-    public DialogueManager manager;
+    public DialogueManager DialogueManager;
     
     
     private void OnTriggerEnter(Collider other)
     {
-        manager.StartConversation(NewConversation, transform.parent.gameObject);
+        DialogueManager.StartConversation(NewConversation, transform.parent.gameObject);
     }
     private void OnTriggerExit(Collider other)
     {
-        manager.FinishConversation();
+        DialogueManager.FinishConversation();
     }
 
 }
