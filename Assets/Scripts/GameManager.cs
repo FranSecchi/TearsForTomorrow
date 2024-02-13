@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance = null;
     internal static GameSlot gameSlot;
+    public static GameManager instance = null;
+
+    public Transform player;
 
     void Awake()
     {
@@ -16,8 +18,8 @@ public class GameManager : MonoBehaviour
         {
 
             instance = this;
-            //GameObject go = new GameObject("GameDataManager");
-            //go.AddComponent<DataPersistenceManager>();
+            GameObject go = new GameObject("GameDataManager");
+            go.AddComponent<DataPersistenceManager>();
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -32,12 +34,14 @@ public class GameManager : MonoBehaviour
 
     internal void SaveData(ref GameData gameData)
     {
-        throw new NotImplementedException();
+        gameData.position = player.position;
+        gameData.rotation = player.forward;
     }
 
     internal void LoadData(GameData gameData)
     {
-        throw new NotImplementedException();
+        player.position = gameData.position;
+        player.forward = gameData.rotation;
     }
     //Load diferent scene methods
 }

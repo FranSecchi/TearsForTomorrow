@@ -4,7 +4,6 @@ using UnityEngine;
 using Newtonsoft.Json;
 using System;
 using System.IO;
-using Newtonsoft.Json.Linq;
 
 
 public class FileDataHandler
