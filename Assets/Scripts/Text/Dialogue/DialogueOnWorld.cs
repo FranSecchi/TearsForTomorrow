@@ -17,8 +17,8 @@ public class DialogueOnWorld : DialogueManager
 
     protected override void Initialize()
     {
-        //DialoguePanel.transform.LookAt(DialoguePanel.transform.position + PointTo.transform.rotation * Vector3.forward,
-        //        PointTo.transform.rotation * Vector3.up);
+        DialoguePanel.transform.LookAt(DialoguePanel.transform.position + PointTo.transform.rotation * Vector3.forward,
+                PointTo.transform.rotation * Vector3.up);
         HideDialogue();
     }
 }

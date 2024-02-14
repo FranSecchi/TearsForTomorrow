@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Assertions;
 
 public abstract class DialogueManager : LocalizedText
 {
@@ -74,6 +75,7 @@ public abstract class DialogueManager : LocalizedText
 
     protected override void OnLanguageChanged()
     {
-        SetText(currentNode);
+        if (currentNode != null)
+            SetText(currentNode);
     }
 }
