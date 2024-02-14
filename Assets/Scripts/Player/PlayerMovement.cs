@@ -9,14 +9,19 @@ public class PlayerMovement : MonoBehaviour
 {
     public LayerMask whatCanBeClickedOn;
 
+    private Camera currentCamera;
     private NavMeshAgent agent;
     private bool interacting;
     private Interactuable interactWith;
     private Vector3 dest;
+
+    public Camera CurrentCamera { get => currentCamera; set => currentCamera = value; }
+
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        currentCamera = Camera.main;
         interacting = false;
         interactWith = null;
     }
@@ -36,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
             CheckInteract();
         if (Input.GetMouseButtonDown(0))
         {
-            Ray myRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Ray myRay = currentCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitInfo;
             if(Physics.Raycast(myRay, out hitInfo, 100, whatCanBeClickedOn))
             {
@@ -59,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
             case 3: //ground
                 dest = hitInfo.point;
                 interacting = false;
+                interactWith = null;
                 break;
             case 6: //interactuable
                 dest = hit.transform.GetChild(0).position;
@@ -75,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
         if (Vector3.Distance(transform.position, dest) < 0.1f)
         {
             interactWith.Interact(true);
+            interacting = false;
         }
     }
 }
