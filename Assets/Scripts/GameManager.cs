@@ -10,7 +10,9 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
 
     public Transform player;
+    private Camera currentCamera;
 
+    public Camera CurrentCamera { get => currentCamera; set => currentCamera = value; }
     void Awake()
     {
 
@@ -19,7 +21,8 @@ public class GameManager : MonoBehaviour
 
             instance = this;
             GameObject go = new GameObject("GameDataManager");
-            go.AddComponent<DataPersistenceManager>();
+            //go.AddComponent<DataPersistenceManager>();
+            currentCamera = Camera.main;
             DontDestroyOnLoad(gameObject);
         }
         else
