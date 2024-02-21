@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (interactWith != null)
         {
-            interactWith.Interact(false);
+            //interactWith.Interact(false);
             interactWith = null;
         }
         GameObject hit = hitInfo.collider.gameObject;
@@ -65,9 +65,10 @@ public class PlayerMovement : MonoBehaviour
                 interactWith = null;
                 break;
             case 6: //interactuable
-                dest = hit.transform.GetChild(0).position;
-                interacting = true;
                 interactWith = hit.GetComponent<Interactuable>();
+                if(interactWith.getStandPosition() != null)
+                    dest = interactWith.getStandPosition().position;
+                interacting = true;
                 break;
             default:
                 break;
