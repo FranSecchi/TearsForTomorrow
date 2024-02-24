@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class SetCamera_Interact : CameraController, Interactuable
 {
+    public Transform StandPosition;
+    public Transform getStandPosition()
+    {
+        return StandPosition;
+    }
+
     public void Interact(bool activate)
     {
         if (activate)

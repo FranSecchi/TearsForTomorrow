@@ -5,4 +5,5 @@ using UnityEngine;
 public interface Interactuable 
 {
     void Interact(bool activate);
+    Transform getStandPosition();
 }

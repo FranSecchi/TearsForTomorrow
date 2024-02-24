@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Armari_1
-  m_Shader: {fileID: 4800000, guid: 6de1f8fbffcf7964993e07633c0c090e, type: 3}
+  m_Shader: {fileID: 4800000, guid: 9a2194b0e6c142e49801b83205ddb887, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
