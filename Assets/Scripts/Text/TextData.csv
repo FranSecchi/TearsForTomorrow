@@ -13,3 +13,13 @@ Fine;Fine;Be;Bien
 Bye;Bye;Adeu;Adios
 CollectUI;Take;Agafar;Coger
 InspectUI;Inspect;Inspeccionar;Inspeccionar
+ItemTest1_dec;testing item eng;testeig item cat;testeo item esp
+ItemTest1_name;Name item;Nom Item;Nombre Item
+ItemTest2_name;Name2;Nom2;Nombre2
+ItemCombo1_name;NameCombo;NomComvo;NombreCombo
+ItemCombo1_dec;Desc comb eng;Desc comb cat;Desc combo sp
+ItemTest2_dec;Desc2 eng;Desc2 cat;Desc2 sp
+ContinueBtn;Continue Game;Continuar Partida; Continuar Partida
+NewGameBtn;New Game;Nova Partida; Nueva Partida
+Quit; Quit; Sortir; Salir
+CofreKey;Treasure;Cofre;Cofre

@@ -12,10 +12,12 @@ public class ConversationTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         DialogueManager.StartConversation(NewConversation, transform.parent.gameObject);
+        PlayerAnimation.instance.Talk(true);
     }
     private void OnTriggerExit(Collider other)
     {
         DialogueManager.FinishConversation();
+        PlayerAnimation.instance.Talk(false);
     }
 
 }

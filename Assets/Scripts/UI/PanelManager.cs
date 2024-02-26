@@ -7,27 +7,23 @@ public class PanelManager : MonoBehaviour
     public GameObject escapePanel;
     public GameObject inventoryPanel;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Show(escapePanel, false);
-        Show(inventoryPanel, false);
-    }
+    
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Show(escapePanel, !escapePanel.activeSelf);
+            Show(escapePanel);
         }
         if (Input.GetKeyDown(KeyCode.I))
         {
-            Show(inventoryPanel, !inventoryPanel.activeSelf);
+            Show(inventoryPanel);
         }
     }
-    void Show(GameObject go, bool b)
+    public void Show(GameObject go)
     {
-        go.SetActive(b);
+        if(go != null)
+            go.SetActive(!go.activeSelf);
     }
 }

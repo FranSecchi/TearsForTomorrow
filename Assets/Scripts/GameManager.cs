@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
 
             instance = this;
             GameObject go = new GameObject("GameDataManager");
-            //go.AddComponent<DataPersistenceManager>();
+            go.AddComponent<DataPersistenceManager>();
             currentCamera = Camera.main;
             DontDestroyOnLoad(gameObject);
         }
@@ -37,14 +37,14 @@ public class GameManager : MonoBehaviour
 
     internal void SaveData(ref GameData gameData)
     {
-        gameData.position = player.position;
-        gameData.rotation = player.forward;
+        //gameData.position = player.position;
+        //gameData.rotation = player.forward;
     }
 
     internal void LoadData(GameData gameData)
     {
-        player.position = gameData.position;
-        player.forward = gameData.rotation;
+        //player.position = gameData.position;
+        //player.forward = gameData.rotation;
     }
     //Load diferent scene methods
 }

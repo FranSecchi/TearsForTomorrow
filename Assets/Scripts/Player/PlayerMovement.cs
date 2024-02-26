@@ -50,11 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleClick(RaycastHit hitInfo)
     {
-        if (interactWith != null)
-        {
-            //interactWith.Interact(false);
-            interactWith = null;
-        }
+        
         GameObject hit = hitInfo.collider.gameObject;
         dest = transform.position;
         switch (hit.layer)
@@ -62,13 +58,28 @@ public class PlayerMovement : MonoBehaviour
             case 3: //ground
                 dest = hitInfo.point;
                 interacting = false;
-                interactWith = null;
+                if (interactWith != null)
+                {
+                    interactWith.Interact(false);
+                    interactWith = null;
+                }
                 break;
             case 6: //interactuable
                 interactWith = hit.GetComponent<Interactuable>();
                 if(interactWith.getStandPosition() != null)
+                {
                     dest = interactWith.getStandPosition().position;
+                }
                 interacting = true;
+                break;
+            case 7: //Usable
+                Usable useWith = hit.GetComponent<Usable>();
+                ItemInfo item = Inventory.instance.GetGrabbedItem();
+                if(item != null)
+                {
+                    useWith.Use(item);
+                    PlayerAnimation.instance.Interact();
+                }
                 break;
             default:
                 break;

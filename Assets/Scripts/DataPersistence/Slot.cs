@@ -1,0 +1,77 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+public class Slot : MonoBehaviour
+{
+    public static GameSlot selected;
+    [SerializeField] private GameObject confirmationPanel;
+    public GameSlot slot;
+    public bool reset = false;
+    public TextMeshProUGUI text;
+
+    private DataPersistenceManager dataManager;
+    private Button button;
+    private Image img;
+    // Start is called before the first frame update
+    void OnEnable()
+    {
+        dataManager = DataPersistenceManager.instance;
+        button = GetComponent<Button>();
+        img = GetComponent<Image>();
+        if (dataManager.isEmpty(slot))
+        {
+            if (!reset)
+            {
+                var alpha = img.color;
+                alpha.a *= 0.5f;
+                img.color = alpha;
+                button.enabled = false;
+            }
+        }
+        else text.text = slot.ToString();
+    }
+
+    private void NewGame()
+    {
+        if (!dataManager.isEmpty(slot))
+        {
+            selected = slot;
+            confirmationPanel.SetActive(true);
+        }
+        else
+        {
+            dataManager.NewGame(slot);
+            dataManager.LoadGame(slot);
+            confirmationPanel.SetActive(false);
+            //GameManager.LoadScene...
+        }
+    }
+    private void ContinueGame()
+    {
+        dataManager.LoadGame(slot);
+        //GameManager.LoadScene...
+    }
+
+    public void OnClick()
+    {
+        if (reset)
+        {
+            NewGame();
+        }
+        else ContinueGame();
+    }
+    public void Cancel()
+    {
+        confirmationPanel.SetActive(false);
+    }
+    public void Confirm()
+    {
+        dataManager.NewGame(selected);
+        dataManager.LoadGame(selected);
+        confirmationPanel.SetActive(false);
+        //GameManager.LoadScene...
+    }
+}
