@@ -18,5 +18,6 @@ public class ConversationInteract : MonoBehaviour,Interactuable
             DialogueManager.StartConversation(NewConversation, gameObject);
         else
             DialogueManager.FinishConversation();
+        PlayerAnimation.instance.Talk(activate);
     }
 }

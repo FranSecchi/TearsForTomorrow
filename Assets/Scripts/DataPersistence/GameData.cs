@@ -7,11 +7,11 @@ using UnityEngine;
 public class GameData 
 {
     public string currentScene;
-    public Vector3 position;
-    public Vector3 rotation;
+    //public Vector3 position;
+    //public Vector3 rotation;
 
     public GameData()
     {
-        currentScene = Parameter.Present_SCENE;
+        currentScene = Parameter.StartMenu_SCENE;
     }
 }

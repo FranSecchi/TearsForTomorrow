@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
-public class InventoryPanel : MonoBehaviour
+public class InventoryPanel : LocalizedText
 {
     public List<GameObject> panels;
     public Sprite selectedSprite;
+    public GameObject hoverPanel;
+    public TextMeshProUGUI nameText;
+    public TextMeshProUGUI descriptionText;
+    private ItemInfo selected;
+    private ItemInfo selected2;
+    private List<ItemInfo> items;
     private void Start()
     {
         foreach (GameObject panel in panels)
@@ -21,17 +28,53 @@ public class InventoryPanel : MonoBehaviour
             clickDetector.Initialize(this, panel);
             panel.SetActive(false);
         }
+        hoverPanel.SetActive(false);
     }
 
     public void PanelClicked(GameObject clickedPanel)
     {
-        Debug.Log("Panel Clicked: " + clickedPanel.name);
-        //GameObject temp = new GameObject();
-        //temp.transform.parent = clickedPanel.transform;
-
-        //Image img = temp.AddComponent<Image>();
-        //img.sprite = selectedSprite;
         clickedPanel.transform.GetChild(0).GetComponentInChildren<Image>().enabled = true;
+        ItemInfo sel = items[panels.IndexOf(clickedPanel)];
+
+        if(sel == selected)
+        {
+            selected = null;
+            clickedPanel.transform.GetChild(0).GetComponentInChildren<Image>().enabled = false;
+        }
+        else if(sel == selected2)
+        {
+            selected2 = null;
+            clickedPanel.transform.GetChild(0).GetComponentInChildren<Image>().enabled = false;
+        }
+        else if (selected == null)
+            selected = sel;
+        else if (selected2 == null)
+            selected2 = sel;
+    }
+    public void Combine()
+    {
+        if (selected == null || selected2 == null)
+            return;
+        Inventory.instance.Combine(selected, selected2);
+        UpdateInventory();
+        selected = null;
+        selected2 = null;
+    }
+    public void Use()
+    {
+        if (selected != null)
+            Inventory.instance.GrabItem(selected);
+    }
+    public void PanelHovered(GameObject hoveredPanel)
+    {
+        hoverPanel.SetActive(true);
+        int index = panels.IndexOf(hoveredPanel);
+
+        if (index >= 0 && index < items.Count)
+        {
+            descriptionText.text = GetText(items[index].descriptionKey);
+            nameText.text = GetText(items[index].nameKey);
+        }
     }
     private void OnEnable()
     {
@@ -40,18 +83,26 @@ public class InventoryPanel : MonoBehaviour
 
     private void UpdateInventory()
     {
-        List<Item> items = Inventory.instance.Items;
-
+        items = Inventory.instance.Items;
+        GameObject p;
+        foreach (GameObject panel in panels)
+            panel.SetActive(false);
         for (int i = 0; i < items.Count && i < panels.Count; i++)
         {
-            GameObject p = panels[i];
+            p = panels[i];
             p.SetActive(true);
             p.transform.GetChild(0).GetComponentInChildren<Image>().enabled = false;
-            p.GetComponent<Image>().sprite = items[i]._info.img;
+            p.GetComponent<Image>().sprite = items[i].img;
         }
     }
+
+    protected override void OnLanguageChanged()
+    {
+        descriptionText.text = "";
+        nameText.text = "";
+    }
 }
-public class PanelClickDetector : MonoBehaviour, IPointerClickHandler
+public class PanelClickDetector : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     private InventoryPanel inventoryPanel;
     private GameObject associatedPanel;
@@ -66,5 +117,17 @@ public class PanelClickDetector : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         inventoryPanel.PanelClicked(associatedPanel);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        inventoryPanel.PanelHovered(associatedPanel);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        inventoryPanel.nameText.text = "";
+        inventoryPanel.descriptionText.text = "";
+        inventoryPanel.hoverPanel.SetActive(false);
     }
 }

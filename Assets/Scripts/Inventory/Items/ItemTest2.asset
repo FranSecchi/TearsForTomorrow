@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 030d9ea20fca24e4b940c1c65583de32, type: 3}
-  m_Name: ItemTest1
+  m_Name: ItemTest2
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
-  img: {fileID: 21300000, guid: 07bf0fc1ff0ab6248b7e7f3d4e2a282a, type: 3}
-  nameKey: ItemTest1_name
-  descriptionKey: ItemTest1_dec
+  img: {fileID: 21300000, guid: 83f3dcdc5c2d64540ba590729768c128, type: 3}
+  nameKey: ItemTest2_name
+  descriptionKey: ItemTest2_dec
   combination: {fileID: 11400000, guid: 692ceeb6187e2c846b727492436ea75c, type: 2}

@@ -10,9 +10,12 @@ public class Item : MonoBehaviour, Interactuable, Collectable
     public GameObject InteractPanel;
     private void Start()
     {
-        InteractPanel.transform.LookAt(InteractPanel.transform.position + ViewToClick.transform.rotation * Vector3.forward,
-                ViewToClick.transform.rotation * Vector3.up);
-        InteractPanel.SetActive(false);
+        if(InteractPanel != null)
+        {
+            InteractPanel.transform.LookAt(InteractPanel.transform.position + ViewToClick.transform.rotation * Vector3.forward,
+                    ViewToClick.transform.rotation * Vector3.up);
+            InteractPanel.SetActive(false);
+        }
     }
     public void Interact(bool activate)
     {
@@ -23,10 +26,9 @@ public class Item : MonoBehaviour, Interactuable, Collectable
 
     public void Collect()
     {
-        Inventory.instance.Add(this);
-        gameObject.GetComponent<Collider>().enabled = false;
-        gameObject.GetComponent<Renderer>().enabled = false;
-        InteractPanel.SetActive(false);
+        Inventory.instance.Add(_info);
+        Destroy(gameObject);
+        PlayerAnimation.instance.GrabItem();
     }
 
     public void Discard()
@@ -36,7 +38,7 @@ public class Item : MonoBehaviour, Interactuable, Collectable
 
     public void Use()
     {
-        throw new System.NotImplementedException();
+
     }
 
     public Transform getStandPosition()

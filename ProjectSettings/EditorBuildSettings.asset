@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/FranTestingScene.unity
+    guid: 5fc90fb3b09300d4ab144da1f3cb2dc7
+  - enabled: 1
+    path: Assets/Scenes/BetihTesting.unity
+    guid: e9d286756648dc64ba455a980f63a385
   m_configObjects: {}
