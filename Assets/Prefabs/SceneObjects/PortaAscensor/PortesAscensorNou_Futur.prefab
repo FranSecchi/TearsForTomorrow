@@ -52,6 +52,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: eb42727f2f82d8047893f8d7fb785f14, type: 2}
+    - target: {fileID: -5619610480654028480, guid: 73c1f20312c8b7545be15922b16c2fc6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5619610480654028480, guid: 73c1f20312c8b7545be15922b16c2fc6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 73c1f20312c8b7545be15922b16c2fc6, type: 3}
       propertyPath: m_Name
       value: PortesAscensorNou_Futur
@@ -60,6 +68,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: eb42727f2f82d8047893f8d7fb785f14, type: 2}
+    - target: {fileID: 8998926403407896774, guid: 73c1f20312c8b7545be15922b16c2fc6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8998926403407896774, guid: 73c1f20312c8b7545be15922b16c2fc6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.477
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

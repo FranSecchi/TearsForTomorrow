@@ -40,6 +40,7 @@ public class PlayerAnimation : MonoBehaviour
             yield break;
         yield return new WaitForSeconds(1f);
         item.gameObject.SetActive(true);
+        item.localPosition = Vector3.zero;
     }
     public void Interact()
     {

@@ -6,5 +6,4 @@ public interface Collectable
 {
     void Collect();
     void Discard();
-    void Use();
 }

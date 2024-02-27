@@ -13,13 +13,48 @@ Fine;Fine;Be;Bien
 Bye;Bye;Adeu;Adios
 CollectUI;Take;Agafar;Coger
 InspectUI;Inspect;Inspeccionar;Inspeccionar
-ItemTest1_dec;testing item eng;testeig item cat;testeo item esp
-ItemTest1_name;Name item;Nom Item;Nombre Item
-ItemTest2_name;Name2;Nom2;Nombre2
-ItemCombo1_name;NameCombo;NomComvo;NombreCombo
-ItemCombo1_dec;Desc comb eng;Desc comb cat;Desc combo sp
-ItemTest2_dec;Desc2 eng;Desc2 cat;Desc2 sp
+nSmoke;Smoke;Cigarreta;Cigarrillo
+dSmoke;Smoke found in the bedroom's trashcan;Cigarreta trovada a la paperera de l'habitació;Cigarrillo encontrado en la basura de la habitación
+nElevatorBtn;Button;Botó;Botón
+dElevatorBtn;Seems like a button to place somewhere;Sembla un botó que va a algun lloc;Parece un botón, debería ir en algún lado…
+nGlassTube;Glass tube;Tub de vidre;Tubo de vidrio
+dGlassTube;This will help me to store some kind of liquid;Això m'ajudarà a guardar líquids;Esto me servirá para guardar líquidos
+nFilledGlassTube;Filled Glass tube;Tub de vidre ple;Tubo de vidrio lleno
+dFilledGlassTube;Glass with tears;Tub amb llàgrimes;Tubo con lágrimas
+nNeedle;Needle;Agulla;Aguja
+dNeedle;.;.;.
+nScissors;Scissors;Tisores;Tijeras
+dScissors;.;.;.
+nShovel;Shovel;Pala;Pala
+dShovel;.;.;.
+nKey;Key;Clau;Llave
+dKey;.;.;.
+nLighter;Lighter;Encenedor;Encendedor
+dLighter;.;.;.
+nStatue;Statue;Estatueta;Estátua
+dStatue;.;.;.
+nRope;Rope;Corda;Cuerda
+dRope;.;.;.
+nNeedleRope;Needle and rope;Agulla i corda;Aguja y cuerda
+dNeedleRope;.;.;.
+nBook;Book;Llibreta;Libreta
+dBook;.;.;.
+nCandle;Candle;Espelma;Vela
+dCandle;.;.;.
+nCandleOn;Lighted Candle;Espelma encesa;Vela prendida
+dCandleOn;.;.;.
+nCookie;Cookie;Galeta;Galleta
+dCookie;.;.;.
+nSeed;Seed;Llavor;Semilla
+dSeed;.;.;.
+nPolaroid;Polaroid;Polaroid;Polaroid
+dPolaroid;.;.;.
+nPictures;Picture;Fotografia;Fotografía
+dPictures;.;.;.
+nRing;Ring;Anell;Anillo
+dRing;.;.;.
+nFlouer;Flouer;Flor;Flor
+dFlouer;.;.;.
 ContinueBtn;Continue Game;Continuar Partida; Continuar Partida
 NewGameBtn;New Game;Nova Partida; Nueva Partida
 Quit; Quit; Sortir; Salir
-CofreKey;Treasure;Cofre;Cofre

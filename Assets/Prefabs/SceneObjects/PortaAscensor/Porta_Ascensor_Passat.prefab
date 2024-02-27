@@ -58,7 +58,27 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: fac1fd35fd50e804b96efaeb4114bcd7, type: 2}
     - target: {fileID: 919132149155446097, guid: cdf8cd04130d4c942b737da13806fec5, type: 3}
       propertyPath: m_Name
-      value: Porta_AscensorAntic_Passat
+      value: Porta_Ascensor_Passat
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430627807877089604, guid: cdf8cd04130d4c942b737da13806fec5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430627807877089604, guid: cdf8cd04130d4c942b737da13806fec5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8776092207063721000, guid: cdf8cd04130d4c942b737da13806fec5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.075
+      objectReference: {fileID: 0}
+    - target: {fileID: 8776092207063721000, guid: cdf8cd04130d4c942b737da13806fec5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.795
+      objectReference: {fileID: 0}
+    - target: {fileID: 8776092207063721000, guid: cdf8cd04130d4c942b737da13806fec5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.457
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

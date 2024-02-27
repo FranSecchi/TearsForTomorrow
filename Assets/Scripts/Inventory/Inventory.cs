@@ -41,13 +41,14 @@ public class Inventory : MonoBehaviour
 
     internal void GrabItem(ItemInfo selected)
     {
-        currentItem = Instantiate(selected.prefab, objectOnHand);
+        currentItem = selected.prefab == null ? Instantiate(selected.prefab) : selected.prefab;
+        currentItem.parent = objectOnHand;
         currentItem.gameObject.SetActive(false);
         items.Remove(selected);
         PlayerAnimation.instance.TakeItem(currentItem);
     }
-    internal ItemInfo GetGrabbedItem()
+    internal GameObject GetGrabbedItem()
     {
-        return currentItem.GetComponent<Item>()._info;
+        return currentItem == null? null : currentItem.gameObject;
     }
 }

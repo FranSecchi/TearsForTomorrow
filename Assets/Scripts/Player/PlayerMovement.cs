@@ -60,11 +60,11 @@ public class PlayerMovement : MonoBehaviour
             case 3: //ground
                 dest = hitInfo.point;
                 interacting = false;
-                if (interactWith != null)
-                {
-                    interactWith.Interact(false);
-                    interactWith = null;
-                }
+                //if (interactWith != null)
+                //{
+                //    interactWith.Interact(false);
+                //    interactWith = null;
+                //}
                 break;
             case 6: //interactuable
                 interactWith = hit.GetComponent<Interactuable>();
@@ -75,10 +75,10 @@ public class PlayerMovement : MonoBehaviour
                 interacting = true;
                 break;
             case 7: //Usable
-                Usable useWith = hit.GetComponent<Usable>();
-                ItemInfo item = Inventory.instance.GetGrabbedItem();
+                GameObject item = Inventory.instance.GetGrabbedItem();
                 if(item != null)
                 {
+                    Usable useWith = hit.GetComponent<Usable>();
                     useWith.Use(item);
                     PlayerAnimation.instance.Interact();
                 }
