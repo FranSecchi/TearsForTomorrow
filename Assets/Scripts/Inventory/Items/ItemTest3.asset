@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030d9ea20fca24e4b940c1c65583de32, type: 3}
   m_Name: ItemTest3
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 8465071528738337430, guid: 57d470dda5268bd4091d9520c2bfb7da, type: 3}
   img: {fileID: 21300000, guid: adadea6832526644e9037f7aade7298f, type: 3}
   nameKey: CofreKey
   descriptionKey: ItemCombo1_dec

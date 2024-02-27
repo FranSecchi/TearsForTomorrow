@@ -64,6 +64,7 @@ public class InventoryPanel : LocalizedText
     {
         if (selected != null)
             Inventory.instance.GrabItem(selected);
+        gameObject.SetActive(false);
     }
     public void PanelHovered(GameObject hoveredPanel)
     {

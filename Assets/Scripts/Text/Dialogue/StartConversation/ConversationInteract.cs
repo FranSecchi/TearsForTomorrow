@@ -7,6 +7,7 @@ public class ConversationInteract : MonoBehaviour,Interactuable
     public Conversation NewConversation;
     public DialogueManager DialogueManager;
     public Transform StandPosition;
+    public Animator _anim;
     public Transform getStandPosition()
     {
         return StandPosition;
@@ -19,5 +20,7 @@ public class ConversationInteract : MonoBehaviour,Interactuable
         else
             DialogueManager.FinishConversation();
         PlayerAnimation.instance.Talk(activate);
+        if(_anim != null)
+            _anim.SetBool("Talk", activate);
     }
 }

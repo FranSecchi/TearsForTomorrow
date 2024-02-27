@@ -28,7 +28,7 @@ public class Item : MonoBehaviour, Interactuable, Collectable
     {
         Inventory.instance.Add(_info);
         Destroy(gameObject);
-        PlayerAnimation.instance.GrabItem();
+        PlayerAnimation.instance.TakeItem(null);
     }
 
     public void Discard()
