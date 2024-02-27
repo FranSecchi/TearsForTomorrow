@@ -27,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (agent.velocity != Vector3.zero)
+            transform.eulerAngles = new Vector3(0, Quaternion.LookRotation(agent.velocity - Vector3.zero).eulerAngles.y, 0);
         //In case player is clicking buttons, UI...
         if (EventSystem.current.IsPointerOverGameObject())
             return;
