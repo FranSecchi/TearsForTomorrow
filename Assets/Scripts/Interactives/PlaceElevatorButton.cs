@@ -11,6 +11,9 @@ public class PlaceElevatorButton : MonoBehaviour, Usable
         {
             item.transform.position = transform.position;
             item.transform.parent = transform;
+            Destroy(item.GetComponent<Item>());
+            ElevatorDoors ed = item.GetComponent<ElevatorDoors>();
+            ed.enabled = true;
         }
     }
 

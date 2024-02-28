@@ -17,6 +17,7 @@ public class SetCamera_Interact : CameraController, Interactuable
             gm.CurrentCamera = thisCamera;
             lastCamera.enabled = false;
             thisCamera.enabled = true;
+            lastCamera = thisCamera;
         }
         else
         {
