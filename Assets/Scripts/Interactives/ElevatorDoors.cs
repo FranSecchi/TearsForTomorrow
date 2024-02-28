@@ -18,6 +18,7 @@ public class ElevatorDoors : MonoBehaviour, Interactuable
         if (activate)
         {
             _anim.SetTrigger(open ? "Close" : "Open");
+            PlayerAnimation.instance.Interact();
             open = !open;
         }
     }

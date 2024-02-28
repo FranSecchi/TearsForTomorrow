@@ -10,6 +10,7 @@ public class PlaceElevatorButton : MonoBehaviour, Usable
         if (item.GetComponent<Item>()._info.nameKey.Equals(Parameter.Str_ElevBtn))
         {
             item.transform.position = transform.position;
+            item.transform.forward = transform.forward;
             item.transform.parent = transform;
             Destroy(item.GetComponent<Item>());
             ElevatorDoors ed = item.GetComponent<ElevatorDoors>();

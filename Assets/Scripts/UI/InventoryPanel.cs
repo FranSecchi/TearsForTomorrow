@@ -28,7 +28,6 @@ public class InventoryPanel : LocalizedText
             panel.SetActive(false);
         }
         hoverPanel.SetActive(false);
-        gameObject.SetActive(false);
     }
 
     public void PanelClicked(GameObject clickedPanel)
