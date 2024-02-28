@@ -8,7 +8,6 @@ using TMPro;
 public class InventoryPanel : LocalizedText
 {
     public List<GameObject> panels;
-    public Sprite selectedSprite;
     public GameObject hoverPanel;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI descriptionText;

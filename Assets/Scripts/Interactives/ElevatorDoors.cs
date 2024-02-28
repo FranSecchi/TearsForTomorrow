@@ -2,27 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElevatorDoors : MonoBehaviour
+public class ElevatorDoors : MonoBehaviour, Interactuable
 {
-    private Animator _anim;
+    public Animator _anim;
+    private bool open = false;
     // Start is called before the first frame update
-    void Start()
+
+    public Transform getStandPosition()
     {
-        _anim = GetComponent<Animator>();
+        return null;
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void Interact(bool activate)
     {
-        if (other.CompareTag("Player"))
+        if (activate)
         {
-            _anim.SetTrigger("Open");
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            _anim.SetTrigger("Close");
+            _anim.SetTrigger(open ? "Close" : "Open");
+            PlayerAnimation.instance.Interact();
+            open = !open;
         }
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6867282162897195359}
   - component: {fileID: 3664626114220387597}
   - component: {fileID: 6387745466984521994}
+  - component: {fileID: 5379696569439664906}
   m_Layer: 6
   m_Name: "Bot\xF3Ascensor"
   m_TagString: Untagged
@@ -71,6 +72,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.051079035, y: 0.07648885, z: 0.07765007}
   m_Center: {x: -0.023671985, y: -0.00015461445, z: 0.00032520294}
+--- !u!114 &5379696569439664906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4032089941796630871}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83eef9f03fe60fd49849a69539e1f485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _anim: {fileID: 0}
 --- !u!1001 &949644813424929180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -159,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 627644137209590878, guid: 7b8805a9c14110f4a91e99ceb04c86d2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3643209946257449106, guid: 7b8805a9c14110f4a91e99ceb04c86d2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
