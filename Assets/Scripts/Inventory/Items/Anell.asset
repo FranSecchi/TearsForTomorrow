@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 030d9ea20fca24e4b940c1c65583de32, type: 3}
-  m_Name: ItemTest2
+  m_Name: Anell
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
-  img: {fileID: 21300000, guid: 83f3dcdc5c2d64540ba590729768c128, type: 3}
-  nameKey: nNeedle
-  descriptionKey: dNeedle
-  combination: {fileID: 11400000, guid: 692ceeb6187e2c846b727492436ea75c, type: 2}
+  prefab: {fileID: 826572918181303277, guid: 3a2313a5c8f63a6498e1ccb2a4a40083, type: 3}
+  img: {fileID: 21300000, guid: 5d75d06fa8830104fb9453cf2b228ca2, type: 3}
+  nameKey: nRing
+  descriptionKey: dRing
+  combination: {fileID: 0}

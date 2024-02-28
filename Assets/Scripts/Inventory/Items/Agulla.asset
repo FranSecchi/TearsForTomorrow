@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 030d9ea20fca24e4b940c1c65583de32, type: 3}
-  m_Name: "Bot\xF3Ascensor"
+  m_Name: Agulla
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6867282162897195359, guid: bfc7f4d9a1ce3004ea1b433369597842, type: 3}
-  img: {fileID: 21300000, guid: ef22c9805b922d54089ef0341c86d90f, type: 3}
-  nameKey: nElevatorBtn
-  descriptionKey: dElevatorBtn
-  combination: {fileID: 0}
+  prefab: {fileID: 5034783540318782075, guid: 6acc95484ad87f54aae53a62dc68b48e, type: 3}
+  img: {fileID: 21300000, guid: 43cbc840caf980641999795789f4a658, type: 3}
+  nameKey: nNeedle
+  descriptionKey: dNeedle
+  combination: {fileID: 11400000, guid: e4b1d47031ab70f43a416004496f9fe7, type: 2}

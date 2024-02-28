@@ -49,8 +49,8 @@ nSeed;Seed;Llavor;Semilla
 dSeed;.;.;.
 nPolaroid;Polaroid;Polaroid;Polaroid
 dPolaroid;.;.;.
-nPictures;Picture;Fotografia;Fotografía
-dPictures;.;.;.
+nPicturePast;Picture;Fotografia;Fotografía
+dPicturePast;.;.;.
 nRing;Ring;Anell;Anillo
 dRing;.;.;.
 nFlouer;Flouer;Flor;Flor
@@ -58,3 +58,5 @@ dFlouer;.;.;.
 ContinueBtn;Continue Game;Continuar Partida; Continuar Partida
 NewGameBtn;New Game;Nova Partida; Nueva Partida
 Quit; Quit; Sortir; Salir
+nPicturePresent;Picture;Fotografia;Fotografía
+dPicturePresent;.;.;.

@@ -92,7 +92,9 @@ public class InventoryPanel : LocalizedText
             p = panels[i];
             p.SetActive(true);
             p.transform.GetChild(0).GetComponentInChildren<Image>().enabled = false;
-            p.GetComponent<Image>().sprite = items[i].img;
+            Image im = p.transform.GetChild(2).GetComponent<Image>();
+            im.sprite = items[i].img;
+            //im.enabled = true;
         }
     }
 
