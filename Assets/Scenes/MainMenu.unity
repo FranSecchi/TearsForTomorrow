@@ -6929,9 +6929,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2033833724}
   - component: {fileID: 2033833723}
-  - component: {fileID: 2033833722}
   - component: {fileID: 2033833721}
   - component: {fileID: 2033833725}
+  - component: {fileID: 2033833726}
   m_Layer: 0
   m_Name: FollowPathCamera
   m_TagString: Untagged
@@ -6953,14 +6953,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   pathParent: {fileID: 1825091359}
---- !u!81 &2033833722
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033833720}
-  m_Enabled: 1
 --- !u!20 &2033833723
 Camera:
   m_ObjectHideFlags: 0
@@ -7046,6 +7038,19 @@ MonoBehaviour:
   targetDirection: {x: 0, y: 0}
   targetCharacterDirection: {x: 0, y: 0}
   characterBody: {fileID: 0}
+--- !u!114 &2033833726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033833720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &2056280742
 GameObject:
   m_ObjectHideFlags: 0
