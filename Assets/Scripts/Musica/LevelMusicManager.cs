@@ -16,6 +16,7 @@ public enum States{
 public class LevelMusicManager : MonoBehaviour
 {
     public static EventReference LevelMusic;
+    public EventReference LevelMusic_ref;
 
     static FMOD.Studio.EventInstance musicInstance;
     public static Times time;
@@ -24,6 +25,7 @@ public class LevelMusicManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        LevelMusic = LevelMusic_ref;
         musicInstance = RuntimeManager.CreateInstance(LevelMusic);
         musicInstance.start();
     }
@@ -47,5 +49,15 @@ public class LevelMusicManager : MonoBehaviour
     void OnDisable(){
         musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         musicInstance.release();    
+    }
+    private void OnTriggerEnter(Collider collider) {
+        if(collider.gameObject.CompareTag("Player")){
+            setElevator(States.True);
+        }
+    }
+    private void OnTriggerExit(Collider collider) {
+        if(collider.gameObject.CompareTag("Player")){
+            setElevator(States.False);
+        }
     }
 }
