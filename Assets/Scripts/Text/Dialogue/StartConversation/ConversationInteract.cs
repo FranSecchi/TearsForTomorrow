@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ConversationInteract : MonoBehaviour,Interactuable
@@ -21,5 +22,22 @@ public class ConversationInteract : MonoBehaviour,Interactuable
             DialogueManager.FinishConversation();
         PlayerAnimation.instance.Talk(activate);
         talker.GetComponent<Animator>().SetBool("Talk", activate);
+        switch (talker.name){
+            case "Recepcionista":
+                SoundManager.playRecepcionista();
+                break;
+            case "Propietari":
+                SoundManager.playPropietari();
+                break;
+            case "AmaDeLlaves":
+                SoundManager.playAmaLlaves();
+                break;
+            case "Morta":
+                SoundManager.playMorta();
+                break;
+            case "Jardinero":
+                SoundManager.playJardinero();
+                break;
+        }
     }
 }
