@@ -9,6 +9,7 @@ public class TakePicture : MonoBehaviour, Usable
     {
         if (item.GetComponent<Item>()._info.nameKey.Equals(Parameter.Str_Polaroid))
         {
+            SoundManager.playPhoto();
             Inventory.instance.Add(foto);
             Destroy(this);
             return true;
