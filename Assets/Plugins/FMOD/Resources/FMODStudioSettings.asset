@@ -635,6 +635,7 @@ MonoBehaviour:
   Banks:
   - Music
   - Sounds
+  - Vocals
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
