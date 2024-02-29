@@ -9,13 +9,17 @@ public class InventoryPanel : LocalizedText
 {
     public List<GameObject> panels;
     public GameObject hoverPanel;
+    public GameObject usingItemPanel;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI descriptionText;
     private ItemInfo selected;
     private ItemInfo selected2;
+    private ItemInfo _using;
     private List<ItemInfo> items;
+    private Inventory inventory;
     private void Start()
     {
+        inventory = Inventory.instance;
         foreach (GameObject panel in panels)
         {
             PanelClickDetector clickDetector = panel.GetComponent<PanelClickDetector>();
@@ -27,7 +31,9 @@ public class InventoryPanel : LocalizedText
             clickDetector.Initialize(this, panel);
             panel.SetActive(false);
         }
+        usingItemPanel.SetActive(false);
         hoverPanel.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     public void PanelClicked(GameObject clickedPanel)
@@ -54,15 +60,26 @@ public class InventoryPanel : LocalizedText
     {
         if (selected == null || selected2 == null)
             return;
-        Inventory.instance.Combine(selected, selected2);
+        inventory.Combine(selected, selected2);
         UpdateInventory();
         selected = null;
         selected2 = null;
     }
     public void Use()
     {
-        if (selected != null)
-            Inventory.instance.GrabItem(selected);
+        if(_using != null)
+        {
+            inventory.ReturnItem(_using);
+            _using = null;
+            usingItemPanel.SetActive(false);
+            gameObject.SetActive(false);
+            return;
+        }
+        if (selected != null && _using == null)
+        {
+            inventory.GrabItem(selected);
+            _using = selected;
+        }
         gameObject.SetActive(false);
     }
     public void PanelHovered(GameObject hoveredPanel)
@@ -78,13 +95,21 @@ public class InventoryPanel : LocalizedText
     }
     private void OnEnable()
     {
+        selected = null;
+        selected2 = null;
         UpdateInventory();
     }
-
     private void UpdateInventory()
     {
-        items = Inventory.instance.Items;
+        items = inventory.Items;
         GameObject p;
+        usingItemPanel.SetActive(false);
+        if (inventory.CurrentItem != null)
+        {
+            Image im = usingItemPanel.transform.GetChild(1).GetComponent<Image>();
+            im.sprite = _using.img;
+            usingItemPanel.SetActive(true);
+        }
         foreach (GameObject panel in panels)
             panel.SetActive(false);
         for (int i = 0; i < items.Count && i < panels.Count; i++)

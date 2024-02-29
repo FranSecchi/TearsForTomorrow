@@ -60,11 +60,11 @@ public class PlayerMovement : MonoBehaviour
             case 3: //ground
                 dest = hitInfo.point;
                 interacting = false;
-                //if (interactWith != null)
-                //{
-                //    interactWith.Interact(false);
-                //    interactWith = null;
-                //}
+                if (interactWith != null)
+                {
+                    interactWith.Interact(false);
+                    interactWith = null;
+                }
                 break;
             case 6: //interactuable
                 if(!Use(hit))

@@ -41,14 +41,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3610528624848493002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71fe0a5f05b75844e9213f25ebd9b6c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 353976bf002562841b885c5cc9d4dd84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MenuMusic:
     Guid:
-      Data1: 990496258
-      Data2: 1197366528
-      Data3: -1732758086
-      Data4: 76697306
-    Path: event:/Menu_Music
-  credits: 1
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  credits: 0

@@ -10,7 +10,6 @@ public class PortaMestressa : MonoBehaviour, Usable
     {
         if (item.GetComponent<Item>()._info.nameKey.Equals(Parameter.Str_DoorKey))
         {
-            Debug.Log("llega");
             OpenDoor();
             Destroy(item);
             Destroy(inter);

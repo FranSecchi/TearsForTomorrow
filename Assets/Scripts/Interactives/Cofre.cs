@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class Cofre : MonoBehaviour, Usable
 {
-
+    public ItemInfo llibreta; 
+    public ItemInfo espelma;
+    public GameObject inventory;
     public bool Use(GameObject item)
     {
         if (item.GetComponent<Item>()._info.nameKey.Equals(Parameter.Str_CofreKey))
@@ -15,21 +17,10 @@ public class Cofre : MonoBehaviour, Usable
         }
         return false;
     }
-
     private void OpenCofre()
     {
-        Debug.Log("open");
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Inventory.instance.Add(llibreta);
+        Inventory.instance.Add(espelma);
+        inventory.SetActive(true);
     }
 }

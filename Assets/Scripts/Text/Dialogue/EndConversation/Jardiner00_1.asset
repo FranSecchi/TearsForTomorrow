@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Jardiner00_1
   m_EditorClassIdentifier: 
   Options: []
+  RespostaTime: 2
+  RespostaKeyText: Bye
   NodeKeyText: Jardiner00_1

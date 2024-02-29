@@ -11,9 +11,14 @@ public abstract class DialogueManager : LocalizedText
     public GameObject DialoguePanel;
     public TextMeshProUGUI Name;
     public TextMeshProUGUI Speech;
+    public TextMeshProUGUI Answer;
     public TextMeshProUGUI[] Options;
     private GameObject talking;
     private DialogueNode currentNode;
+    private bool conversating = false;
+
+    public bool Conversating { get => conversating; set => conversating = value; }
+
     private void Start()
     {
         Initialize();
@@ -41,36 +46,45 @@ public abstract class DialogueManager : LocalizedText
     private void DoEndNode(EndNode endNode)
     {
         endNode.OnChosen(talking);
+        conversating = false;
         PlayerAnimation.instance.Talk(false);
-        HideDialogue();
     }
 
     internal void FinishConversation()
     {
+        conversating = false;
         HideDialogue();
     }
     internal void StartConversation(Conversation newConversation, GameObject talker)
     {
+        if (conversating)
+            return;
         talking = talker;
         currentNode = newConversation.StartNode;
-        Name.text = GetText(newConversation.Name);
+        Name.text = newConversation.Name;
+        conversating = true;
         SetText(currentNode);
         ShowDialogue();
     }
     private void SetText(DialogueNode node)
     {
         Speech.text = GetText(node.NodeKeyText);
+        StartCoroutine(PrintAnswer(node));
+    }
+
+    private IEnumerator PrintAnswer(DialogueNode node)
+    {
+        Answer.text = "";
         for (int i = 0; i < Options.Length; i++)
         {
-            if (i < node.Options.Count)
-            {
-                Options[i].transform.parent.gameObject.SetActive(true);
-                Options[i].text = GetText(node.Options[i].OptionKeyText);
-            }
-            else
-            {
-                Options[i].transform.parent.gameObject.SetActive(false);
-            }
+            Options[i].transform.parent.gameObject.SetActive(false);
+        }
+        yield return new WaitForSeconds(node.RespostaTime);
+        Answer.text = GetText(node.RespostaKeyText);
+        for (int i = 0; i < node.Options.Count; i++)
+        {
+            Options[i].transform.parent.gameObject.SetActive(true);
+            Options[i].text = GetText(node.Options[i].OptionKeyText);
         }
     }
 

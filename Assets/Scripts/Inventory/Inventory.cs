@@ -11,12 +11,13 @@ public class Inventory : MonoBehaviour
     private List<ItemInfo> items;
     private Transform currentItem;
     public List<ItemInfo> Items { get => items; set => items = value; }
+    public Transform CurrentItem { get => currentItem; set => currentItem = value; }
 
     private void Awake()
     {
+        if(instance == null) instance = this;
         items = new List<ItemInfo>();
         _gm = GameManager.instance;
-        if(instance == null) instance = this;
     }
 
 
@@ -49,6 +50,8 @@ public class Inventory : MonoBehaviour
     }
     internal void GrabItem(ItemInfo selected)
     {
+        if (selected.prefab == null)
+            return;
         currentItem = selected.prefab == null ? Instantiate(selected.prefab) : selected.prefab;
         currentItem.parent = objectOnHand;
         currentItem.gameObject.SetActive(false);
@@ -58,5 +61,13 @@ public class Inventory : MonoBehaviour
     internal GameObject GetGrabbedItem()
     {
         return currentItem == null? null : currentItem.gameObject;
+    }
+    internal void ReturnItem(ItemInfo item)
+    {
+        PlayerAnimation.instance.TakeItem(null);
+        currentItem.parent = null;
+        currentItem.gameObject.SetActive(false);
+        currentItem = null;
+        Add(item);
     }
 }
