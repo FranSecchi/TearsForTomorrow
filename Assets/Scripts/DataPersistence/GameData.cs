@@ -7,8 +7,8 @@ using UnityEngine;
 public class GameData 
 {
     public string currentScene;
-    internal Vector3 playerPos;
-    internal Vector3 playerForward;
+    public Vector3 playerPos;
+    public Vector3 playerForward;
 
     //public Vector3 position;
     //public Vector3 rotation;

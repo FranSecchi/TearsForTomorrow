@@ -26,4 +26,8 @@ public class PanelManager : MonoBehaviour
         if(go != null)
             go.SetActive(!go.activeSelf);
     }
+    public void ReturnMenu()
+    {
+        GameManager.instance.LoadMenu();
+    }
 }

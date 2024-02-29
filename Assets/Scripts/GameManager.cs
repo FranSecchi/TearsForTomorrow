@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
     public Camera CurrentCamera { get => currentCamera; set => currentCamera = value; }
     void Awake()
     {
-
         if (instance == null)
         {
 
@@ -35,10 +34,13 @@ public class GameManager : MonoBehaviour
     }
     public void LoadMenu()
     {
+        dataManager.SaveGame(gameSlot);
+        salvables = new List<Saveable>();
         SceneManager.LoadScene(Parameter.StartMenu_SCENE);
     }
     public void AddSaveable(Saveable saveable)
     {
+        Debug.Log("Added");
         salvables.Add(saveable);
     }
     internal void SaveData(ref GameData gameData)
@@ -57,20 +59,22 @@ public class GameManager : MonoBehaviour
         //player.forward = gameData.rotation;
         foreach (Saveable s in salvables)
         {
+            Debug.Log("Load");
             s.Load(gameData);
         }
     }
     //Load diferent scene methods
     public void LoadGame(GameSlot slot)
     {
+        gameSlot = slot;
         SceneManager.LoadScene("FranTestingScene");
     }
 
     internal void LoadNewGame(GameSlot slot)
     {
         gameSlot = slot;
+        dataManager.NewGame(gameSlot);
         SceneManager.LoadScene("FranTestingScene");
-        dataManager.NewGame(slot);
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {

@@ -66,6 +66,7 @@ public class DataPersistenceManager : MonoBehaviour
     {
         if (gameData == null)
         {
+            Debug.Log("new??");
             NewGame(gameSlot);
         }
         gm.SaveData(ref gameData);

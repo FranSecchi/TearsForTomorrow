@@ -22,11 +22,15 @@ public class PlayerMovement : MonoBehaviour, Saveable
 
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        _gm = GameManager.instance;
+        _gm.AddSaveable(GetComponent<Saveable>());
+    }
     void Start()
     {
         stepSound = RuntimeManager.CreateInstance(stepSoundRef);
         agent = GetComponent<NavMeshAgent>();
-        _gm = GameManager.instance;
         interacting = false;
         interactWith = null;
     }

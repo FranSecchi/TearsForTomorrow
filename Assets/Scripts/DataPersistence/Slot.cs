@@ -68,6 +68,6 @@ public class Slot : MonoBehaviour
     public void Confirm()
     {
         confirmationPanel.SetActive(false);
-        GameManager.instance.LoadNewGame(slot);
+        GameManager.instance.LoadNewGame(selected);
     }
 }
