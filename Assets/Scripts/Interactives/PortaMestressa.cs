@@ -5,6 +5,7 @@ using UnityEngine;
 public class PortaMestressa : MonoBehaviour, Usable
 {
     public Animator _anim;
+    public SetCamera_Interact inter;
     public bool Use(GameObject item)
     {
         if (item.GetComponent<Item>()._info.nameKey.Equals(Parameter.Str_DoorKey))
@@ -12,6 +13,7 @@ public class PortaMestressa : MonoBehaviour, Usable
             Debug.Log("llega");
             OpenDoor();
             Destroy(item);
+            Destroy(inter);
             return true;
         }
         return false;
