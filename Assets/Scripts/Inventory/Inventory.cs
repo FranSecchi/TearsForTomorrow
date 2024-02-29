@@ -24,6 +24,7 @@ public class Inventory : MonoBehaviour
     public void Add(ItemInfo item)
     {
         items.Add(item);
+        SoundManager.playGrab();
     }
 
     internal bool Combine(ItemInfo selected, ItemInfo selected2)

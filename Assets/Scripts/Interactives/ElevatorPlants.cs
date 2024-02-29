@@ -18,20 +18,16 @@ public class ElevatorPlants : MonoBehaviour, Interactuable
         Panel.SetActive(false);
         codeInputPanel.SetActive(false);
     }
-    public void LoadScene(string scene)
+    public void LoadScene(int epoca)
     {
         //if (SceneManager.GetActiveScene().name == scene)
         //    return;
         //StartCoroutine(LoadAsync(scene));
-        if (current.name.Equals(scene))
+        if (current.name.Equals(Maps[epoca].name))
             return;
-        foreach(GameObject map in Maps)
-        {
-            if (map.name.Equals(scene))
-            {
-                StartCoroutine(ChangeMap(map));
-            }
-        }
+        ShaderModifier.changeShader((Times)epoca);
+        StartCoroutine(ChangeMap(Maps[epoca]));
+        
     }
     IEnumerator ChangeMap(GameObject map)
     {
