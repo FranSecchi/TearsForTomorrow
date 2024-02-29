@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMOD;
 using UnityEngine;
 
 public class ElevatorDoors : MonoBehaviour, Interactuable
@@ -17,9 +18,10 @@ public class ElevatorDoors : MonoBehaviour, Interactuable
     {
         if (activate)
         {
+            if(open)SoundManager.playButton();
             _anim.SetTrigger(open ? "Close" : "Open");
             PlayerAnimation.instance.Interact();
-            SoundManager.playAscensor();
+            if (!open) SoundManager.playAscensor();
             open = !open;
         }
     }
