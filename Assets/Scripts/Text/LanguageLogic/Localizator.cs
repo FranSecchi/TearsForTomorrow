@@ -30,7 +30,6 @@ public class Localizator : MonoBehaviour
 
     public static string GetText(string textKey)
     {
-        Debug.Log(textKey);
         return Instance.Data[textKey].GetText(Instance._currentLanguage);
     }
 

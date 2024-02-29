@@ -12,6 +12,7 @@ public class InventoryPanel : LocalizedText
     public GameObject usingItemPanel;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI descriptionText;
+    public TextMeshProUGUI useText;
     private ItemInfo selected;
     private ItemInfo selected2;
     private ItemInfo _using;
@@ -101,14 +102,18 @@ public class InventoryPanel : LocalizedText
     }
     private void UpdateInventory()
     {
+        if (inventory == null)
+            return;
         items = inventory.Items;
         GameObject p;
         usingItemPanel.SetActive(false);
+        useText.text = GetText("Use");
         if (inventory.CurrentItem != null)
         {
             Image im = usingItemPanel.transform.GetChild(1).GetComponent<Image>();
             im.sprite = _using.img;
             usingItemPanel.SetActive(true);
+            useText.text = GetText("Unuse");
         }
         foreach (GameObject panel in panels)
             panel.SetActive(false);
