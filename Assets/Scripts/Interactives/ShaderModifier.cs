@@ -39,7 +39,7 @@ public class ShaderModifier : MonoBehaviour
     {
     }
 
-    static void changeShader(Times time){
+    public static void changeShader(Times time){
         foreach(Material mat in materials){
             switch(time){
                 case Times.Past:
