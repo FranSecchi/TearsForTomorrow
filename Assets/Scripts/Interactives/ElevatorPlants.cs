@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.SceneManagement;
 
 public class ElevatorPlants : MonoBehaviour, Interactuable
 {
     public GameObject current;
     public GameObject Panel;
+    public GameObject codeInputPanel;
     public Animator anim;
     public Transform StandPoint;
     public List<GameObject> Maps;
+    public TMP_InputField codeInputField;
     private void Start()
     {
         Panel.SetActive(false);
+        codeInputPanel.SetActive(false);
     }
     public void LoadScene(string scene)
     {
@@ -39,6 +43,26 @@ public class ElevatorPlants : MonoBehaviour, Interactuable
         current.SetActive(false);
         current = map;
     }
+
+    public void Interact(bool activate)
+    {
+        codeInputPanel.SetActive(!codeInputPanel.activeSelf);
+    }
+    public void CheckCode()
+    {
+        // Check player Input, Call from a button
+        // if code correct:  Panel.SetActive(true); codeInputPanel.SetActive(false);
+        string enteredCode = codeInputField.text;
+        if (enteredCode.Equals("1234"))
+        {
+            Panel.SetActive(true);
+            codeInputPanel.SetActive(false);
+        }
+    }
+    public Transform getStandPosition()
+    {
+        return StandPoint;
+    }
     //IEnumerator LoadAsync(string scene)
     //{
     //    AsyncOperation op = SceneManager.LoadSceneAsync(scene);
@@ -56,14 +80,4 @@ public class ElevatorPlants : MonoBehaviour, Interactuable
     //        yield return null;
     //    }
     //}
-
-    public void Interact(bool activate)
-    {
-        Panel.SetActive(!Panel.activeSelf);
-    }
-
-    public Transform getStandPosition()
-    {
-        return StandPoint;
-    }
 }

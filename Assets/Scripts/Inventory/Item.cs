@@ -14,6 +14,7 @@ public class Item : MonoBehaviour, Interactuable, Collectable
         {
             InteractPanel.transform.LookAt(InteractPanel.transform.position + ViewToClick.transform.rotation * Vector3.forward,
                     ViewToClick.transform.rotation * Vector3.up);
+            InteractPanel.GetComponent<Canvas>().worldCamera = ViewToClick;
             InteractPanel.SetActive(false);
         }
     }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030d9ea20fca24e4b940c1c65583de32, type: 3}
   m_Name: Clau
   m_EditorClassIdentifier: 
-  prefab: {fileID: 195932338417713364, guid: 5e8f04f8ea1ad2646b1547143c7b8f45, type: 3}
+  prefab: {fileID: 0}
   img: {fileID: 21300000, guid: a7aa97efb07b95a44b6615472ecddea9, type: 3}
   nameKey: nKey
   descriptionKey: dKey

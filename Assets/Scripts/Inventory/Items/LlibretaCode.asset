@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 030d9ea20fca24e4b940c1c65583de32, type: 3}
-  m_Name: Llibreta
+  m_Name: LlibretaCode
   m_EditorClassIdentifier: 
   prefab: {fileID: 9079516777969425280, guid: 92f9e7e7d12ed9146b6ece51b8af44cd, type: 3}
   img: {fileID: 21300000, guid: 18dca81a59a0cb34fb0a92fb90d06769, type: 3}
   nameKey: nBook
-  descriptionKey: dBook
-  combination: {fileID: 11400000, guid: c5e1bfedbb5e0e24d929615151ea4caa, type: 2}
+  descriptionKey: dBookCode
+  combination: {fileID: 0}

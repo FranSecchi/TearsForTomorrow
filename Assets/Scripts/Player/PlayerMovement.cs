@@ -109,7 +109,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void CheckInteract()
     {
-        if (Vector3.Distance(transform.position, dest) < 0.15f)
+        Vector3 playerPosition = new Vector3(transform.position.x, 0f, transform.position.z);
+        Vector3 destinationPosition = new Vector3(dest.x, 0f, dest.z);
+        if (Vector3.Distance(playerPosition, destinationPosition) < 0.15f)
         {
             interactWith.Interact(true);
             interacting = false;
