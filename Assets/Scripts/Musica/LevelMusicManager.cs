@@ -15,12 +15,12 @@ public enum States{
 }
 public class LevelMusicManager : MonoBehaviour
 {
-    public EventReference LevelMusic;
+    public static EventReference LevelMusic;
 
-    FMOD.Studio.EventInstance musicInstance;
-    public Times time;
-    public States talkingState;
-    public States elevetorState;
+    static FMOD.Studio.EventInstance musicInstance;
+    public static Times time;
+    public static States talkingState;
+    public static States elevetorState;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,15 +32,15 @@ public class LevelMusicManager : MonoBehaviour
     void Update()
     {
     }
-    public void setTime(Times t){
+    public static void setTime(Times t){
         time = t;
         musicInstance.setParameterByNameWithLabel("Time", time.ToString());
     }
-    public void setElevator(States s){
+    public static void setElevator(States s){
         elevetorState = s;
         musicInstance.setParameterByNameWithLabel("Ascensor", elevetorState.ToString());
     }
-    public void setTalking(States s){
+    public static void setTalking(States s){
         talkingState = s;
         musicInstance.setParameterByNameWithLabel("Talking", talkingState.ToString());
     }

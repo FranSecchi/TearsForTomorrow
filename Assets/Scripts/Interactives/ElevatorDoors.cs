@@ -19,6 +19,7 @@ public class ElevatorDoors : MonoBehaviour, Interactuable
         {
             _anim.SetTrigger(open ? "Close" : "Open");
             PlayerAnimation.instance.Interact();
+            SoundManager.playAscensor();
             open = !open;
         }
     }
