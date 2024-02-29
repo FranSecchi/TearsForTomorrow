@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
@@ -15,9 +17,14 @@ public class PlayerMovement : MonoBehaviour, Saveable
     private Vector3 dest;
     private GameManager _gm;
 
+    public EventReference stepSoundRef;
+    private EventInstance stepSound;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        stepSound = RuntimeManager.CreateInstance(stepSoundRef);
         agent = GetComponent<NavMeshAgent>();
         _gm = GameManager.instance;
         interacting = false;
@@ -30,9 +37,15 @@ public class PlayerMovement : MonoBehaviour, Saveable
         //In case player is clicking buttons, UI...
         if (EventSystem.current.IsPointerOverGameObject())
             return;
-        if (agent.velocity != Vector3.zero)
+        if (agent.velocity != Vector3.zero){
+            stepSound.start();
             transform.eulerAngles = new Vector3(0, Quaternion.LookRotation(agent.velocity - Vector3.zero).eulerAngles.y, 0);
+        }
+        else{
+            stepSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
         MouseInput();
+        
     }
 
     private void MouseInput()
@@ -128,5 +141,8 @@ public class PlayerMovement : MonoBehaviour, Saveable
     {
         transform.position = gameData.playerPos;
         transform.forward = gameData.playerForward;
+    }
+    void OnDisable(){
+        stepSound.release();
     }
 }

@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{a20e4590-e7a7-40fe-8eff-43b9f4648735}">
+	<object class="AudioFile" id="{93f97867-2c47-4435-a08a-b18194c3892b}">
 		<property name="assetPath">
-			<value>Sounds/camara.mp3</value>
+			<value>concrete-footsteps-6752.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>24</value>
+			<value>44.0999985</value>
 		</property>
 		<property name="channelCount">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<property name="length">
-			<value>7.7279999999999998</value>
+			<value>59.951020408163266</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{b5bde69f-e650-4180-9b8a-1c52d0c22449}</destination>
