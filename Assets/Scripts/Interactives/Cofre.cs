@@ -22,5 +22,6 @@ public class Cofre : MonoBehaviour, Usable
         Inventory.instance.Add(llibreta);
         Inventory.instance.Add(espelma);
         inventory.SetActive(true);
+        SoundManager.playCofre();
     }
 }

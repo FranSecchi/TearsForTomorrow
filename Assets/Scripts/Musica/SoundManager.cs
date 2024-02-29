@@ -32,6 +32,12 @@ public class SoundManager : MonoBehaviour
     public static EventReference Vocals_Recepcionista;
     public EventReference Vocals_Recepcionista_Ref;
 
+    public static EventReference Cofre_Sound;
+    public EventReference CofreSound_Ref;
+
+    public static EventReference PhotoSound;
+    public EventReference PhotoSound_Ref;
+
     void Start(){
         AscensorSound = AscensorSound_Ref;
         ButtonSound = ButtonSound_Ref;
@@ -44,6 +50,8 @@ public class SoundManager : MonoBehaviour
         Vocals_Morta = Vocals_Morta_Ref;
         Vocals_Propiertari = Vocals_Propietari_Ref;
         Vocals_Recepcionista = Vocals_Recepcionista_Ref;
+        Cofre_Sound = CofreSound_Ref;
+        PhotoSound = PhotoSound_Ref;
         jardíInstance = RuntimeManager.CreateInstance(JardíMusic);
     }
     void OnDisable(){
@@ -86,6 +94,22 @@ public class SoundManager : MonoBehaviour
     }
     public static void playRecepcionista(){
         RuntimeManager.PlayOneShot(Vocals_Recepcionista);
+    }
+    public static void playCofre(){
+        RuntimeManager.PlayOneShot(Cofre_Sound);
+    }
+    public static void playPhoto(){
+        RuntimeManager.PlayOneShot(PhotoSound);
+    }
+    void OnTriggerEnter(Collider collider) {
+        if(collider.gameObject.CompareTag("Player")){
+            playJardí();
+        }
+    }
+    void OnTriggerExit(Collider collider) {
+        if (collider.gameObject.CompareTag("Player")){
+            stopJardí();
+        }
     }
 
 }

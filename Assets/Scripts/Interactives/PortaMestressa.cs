@@ -20,6 +20,7 @@ public class PortaMestressa : MonoBehaviour, Usable
 
     private void OpenDoor()
     {
+        SoundManager.playPorta();
         _anim.SetTrigger("Open");
     }
 }
