@@ -19,6 +19,7 @@ public class DialogueOnWorld : DialogueManager
     {
         DialoguePanel.transform.LookAt(DialoguePanel.transform.position + PointTo.transform.rotation * Vector3.forward,
                 PointTo.transform.rotation * Vector3.up);
+        DialoguePanel.GetComponent<Canvas>().worldCamera = PointTo.GetComponent<Camera>();
         HideDialogue();
     }
 }

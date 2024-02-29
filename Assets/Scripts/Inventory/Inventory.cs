@@ -38,7 +38,15 @@ public class Inventory : MonoBehaviour
         }
         return false;
     }
-
+    internal ItemInfo GetItem(string nameKey)
+    {
+        foreach(ItemInfo it in Items)
+        {
+            if (it.nameKey.Equals(nameKey))
+                return it;
+        }
+        return null;
+    }
     internal void GrabItem(ItemInfo selected)
     {
         currentItem = selected.prefab == null ? Instantiate(selected.prefab) : selected.prefab;

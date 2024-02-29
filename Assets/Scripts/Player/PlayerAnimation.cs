@@ -8,7 +8,6 @@ public class PlayerAnimation : MonoBehaviour
     public static PlayerAnimation instance;
     public Animator _anim;
     private NavMeshAgent agent;
-    private Transform item;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,13 +30,11 @@ public class PlayerAnimation : MonoBehaviour
     public void TakeItem(Transform item)
     {
         _anim.SetTrigger("GrabItem");
-        this.item = item;
-        StartCoroutine(SetItemInHand());
+        if (item != null)
+            StartCoroutine(SetItemInHand(item));
     }
-    IEnumerator SetItemInHand()
+    IEnumerator SetItemInHand(Transform item)
     {
-        if (item == null)
-            yield break;
         yield return new WaitForSeconds(1f);
         item.gameObject.SetActive(true);
         item.localPosition = Vector3.zero;

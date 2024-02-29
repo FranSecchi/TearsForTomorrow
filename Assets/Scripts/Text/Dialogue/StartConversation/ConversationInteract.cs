@@ -7,7 +7,7 @@ public class ConversationInteract : MonoBehaviour,Interactuable
     public Conversation NewConversation;
     public DialogueManager DialogueManager;
     public Transform StandPosition;
-    public Animator _anim;
+    public GameObject talker;
     public Transform getStandPosition()
     {
         return StandPosition;
@@ -16,11 +16,10 @@ public class ConversationInteract : MonoBehaviour,Interactuable
     public void Interact(bool activate)
     {
         if (activate)
-            DialogueManager.StartConversation(NewConversation, gameObject);
+            DialogueManager.StartConversation(NewConversation, talker);
         else
             DialogueManager.FinishConversation();
         PlayerAnimation.instance.Talk(activate);
-        if(_anim != null)
-            _anim.SetBool("Talk", activate);
+        talker.GetComponent<Animator>().SetBool("Talk", activate);
     }
 }

@@ -83,6 +83,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interact
       objectReference: {fileID: 0}
+    - target: {fileID: 3643209946257449106, guid: 7b8805a9c14110f4a91e99ceb04c86d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6715076748087723360}
+    - target: {fileID: 3643209946257449106, guid: 7b8805a9c14110f4a91e99ceb04c86d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Collect
+      objectReference: {fileID: 0}
     - target: {fileID: 6207880250411163693, guid: 7b8805a9c14110f4a91e99ceb04c86d2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

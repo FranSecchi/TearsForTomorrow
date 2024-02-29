@@ -7,6 +7,7 @@ public class EndNode : DialogueNode
 {
     public virtual void OnChosen(GameObject talker)
     {
-
+        Debug.Log(talker);
+        talker.GetComponent<Animator>().SetBool("Talk", false);
     }
 }

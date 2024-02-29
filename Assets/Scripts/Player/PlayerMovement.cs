@@ -67,27 +67,46 @@ public class PlayerMovement : MonoBehaviour
                 //}
                 break;
             case 6: //interactuable
-                interactWith = hit.GetComponent<Interactuable>();
-                if(interactWith.getStandPosition() != null)
-                {
-                    dest = interactWith.getStandPosition().position;
-                }
-                interacting = true;
+                if(!Use(hit))
+                    Interact(hit);
                 break;
-            case 7: //Usable
-                GameObject item = Inventory.instance.GetGrabbedItem();
-                if(item != null)
-                {
-                    Usable useWith = hit.GetComponent<Usable>();
-                    useWith.Use(item);
-                    PlayerAnimation.instance.Interact();
-                }
-                break;
+            //case 7: //Usable
+            //    Use(hit);
+            //    break;
             default:
                 break;
         }
         agent.SetDestination(dest);
     }
+
+    private void Interact(GameObject hit)
+    {
+        interactWith = hit.GetComponent<Interactuable>();
+        if (interactWith == null)
+            return;
+        if (interactWith.getStandPosition() != null)
+        {
+            dest = interactWith.getStandPosition().position;
+        }
+        interacting = true;
+    }
+
+    private bool Use(GameObject hit)
+    {
+        Usable useWith = hit.GetComponent<Usable>();
+        GameObject item = Inventory.instance.GetGrabbedItem();
+        if (item != null && useWith != null)
+        {
+            useWith = hit.GetComponent<Usable>();
+            bool b = useWith.Use(item);
+            if (!b)
+                return false;
+            PlayerAnimation.instance.Interact();
+            return true;
+        }
+        return false;
+    }
+
     private void CheckInteract()
     {
         if (Vector3.Distance(transform.position, dest) < 0.15f)

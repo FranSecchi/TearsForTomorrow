@@ -41,6 +41,7 @@ public abstract class DialogueManager : LocalizedText
     private void DoEndNode(EndNode endNode)
     {
         endNode.OnChosen(talking);
+        PlayerAnimation.instance.Talk(false);
         HideDialogue();
     }
 
@@ -52,7 +53,7 @@ public abstract class DialogueManager : LocalizedText
     {
         talking = talker;
         currentNode = newConversation.StartNode;
-        Name.text = newConversation.Name;
+        Name.text = GetText(newConversation.Name);
         SetText(currentNode);
         ShowDialogue();
     }

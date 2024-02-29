@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface Usable
 {
-    public void Use(GameObject item);
+    public bool Use(GameObject item);
 }

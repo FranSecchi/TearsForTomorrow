@@ -6,13 +6,14 @@ using UnityEngine;
 public class Cofre : MonoBehaviour, Usable
 {
 
-    public void Use(GameObject item)
+    public bool Use(GameObject item)
     {
-        Debug.Log("llega");
         if (item.GetComponent<Item>()._info.nameKey.Equals(Parameter.Str_CofreKey))
         {
             OpenCofre();
+            return true;
         }
+        return false;
     }
 
     private void OpenCofre()

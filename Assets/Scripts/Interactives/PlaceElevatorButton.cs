@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlaceElevatorButton : MonoBehaviour, Usable
 {
-    public void Use(GameObject item)
+    public bool Use(GameObject item)
     {
         
         if (item.GetComponent<Item>()._info.nameKey.Equals(Parameter.Str_ElevBtn))
@@ -16,7 +16,9 @@ public class PlaceElevatorButton : MonoBehaviour, Usable
             Destroy(item.GetComponent<Item>());
             ElevatorDoors ed = item.GetComponent<ElevatorDoors>();
             ed.enabled = true;
+            return true;
         }
+        return false;
     }
 
     // Start is called before the first frame update
