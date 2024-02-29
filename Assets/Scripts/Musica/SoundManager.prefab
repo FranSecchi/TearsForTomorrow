@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8686075477091220777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 704668651602306836}
+  - component: {fileID: 1633756032942099005}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &704668651602306836
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8686075477091220777}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1633756032942099005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8686075477091220777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e1b017a4caa69c4896d9d5fc0d4b33d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AscensorSound:
+    Guid:
+      Data1: -1776375614
+      Data2: 1312332549
+      Data3: -1571022181
+      Data4: 1483203423
+    Path: event:/Ascensor
+  ButtonSound:
+    Guid:
+      Data1: 851045342
+      Data2: 1123451378
+      Data3: -601235028
+      Data4: -1497964461
+    Path: event:/Button
+  BellSound:
+    Guid:
+      Data1: -693722758
+      Data2: 1129620440
+      Data3: 440564876
+      Data4: -1188933691
+    Path: event:/Campana
+  GrabSound:
+    Guid:
+      Data1: 1251767473
+      Data2: 1315807017
+      Data3: 1249957298
+      Data4: 1648606063
+    Path: event:/Grab
+  "Jard\xEDMusic":
+    Guid:
+      Data1: -139687177
+      Data2: 1121274750
+      Data3: -125596999
+      Data4: -1914968560
+    Path: "event:/Jard\xED"
+  PortaSound:
+    Guid:
+      Data1: 1194597972
+      Data2: 1118849490
+      Data3: 612192167
+      Data4: 1877708681
+    Path: event:/Porta
+  Vocals_AmaLlaves:
+    Guid:
+      Data1: -2101170073
+      Data2: 1114335714
+      Data3: -489697406
+      Data4: 2031342983
+    Path: event:/Vocals_AmaLlaves
+  Vocals_Jardinero:
+    Guid:
+      Data1: -830239307
+      Data2: 1320649455
+      Data3: -1730092656
+      Data4: 1057658009
+    Path: event:/Vocals_Jardinero
+  Vocals_Morta:
+    Guid:
+      Data1: 1468031906
+      Data2: 1181134399
+      Data3: 1438395834
+      Data4: 1486091052
+    Path: event:/Vocals_Morta
+  Vocals_Propiertari:
+    Guid:
+      Data1: -894712979
+      Data2: 1090727693
+      Data3: -724056699
+      Data4: -12859420
+    Path: event:/Vocals_Propietari
+  Vocals_Recepcionista:
+    Guid:
+      Data1: 17088324
+      Data2: 1173845834
+      Data3: -1079802466
+      Data4: -551313268
+    Path: event:/Vocals_Recepcionista
