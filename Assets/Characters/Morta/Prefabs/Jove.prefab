@@ -9,16 +9,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 4eaff34d245ec0542b0681309351948d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4eaff34d245ec0542b0681309351948d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4eaff34d245ec0542b0681309351948d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4eaff34d245ec0542b0681309351948d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.7468185
+      value: 8.980741
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4eaff34d245ec0542b0681309351948d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.007202387
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4eaff34d245ec0542b0681309351948d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.9331665
+      value: -33.93657
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4eaff34d245ec0542b0681309351948d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -48,13 +60,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4eaff34d245ec0542b0681309351948d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -1527614881612994136, guid: 4eaff34d245ec0542b0681309351948d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 358f7aeb55ce0d944ad96221055836c9, type: 2}
     - target: {fileID: 919132149155446097, guid: 4eaff34d245ec0542b0681309351948d, type: 3}
       propertyPath: m_Name
-      value: morta_final
+      value: Jove
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
