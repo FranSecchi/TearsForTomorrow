@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: LlibreLlarg_Present
-  m_Shader: {fileID: 4800000, guid: 16a834f6366f667489b2a9c12e220d4c, type: 3}
+  m_Shader: {fileID: 4800000, guid: 51a95d927c6ea74449f432893bccaf69, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
