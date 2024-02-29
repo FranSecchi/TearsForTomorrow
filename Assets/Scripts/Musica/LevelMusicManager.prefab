@@ -45,6 +45,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb6344a0e4fc00b40a7ca12919d674c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelMusic_ref:
+    Guid:
+      Data1: -1783203872
+      Data2: 1142543264
+      Data3: 1857346198
+      Data4: -871723256
+    Path: event:/Level_Music
 --- !u!65 &2088400217393818129
 BoxCollider:
   m_ObjectHideFlags: 0
