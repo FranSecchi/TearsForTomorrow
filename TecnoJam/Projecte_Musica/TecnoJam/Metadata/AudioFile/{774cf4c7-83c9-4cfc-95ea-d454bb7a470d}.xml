@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{774cf4c7-83c9-4cfc-95ea-d454bb7a470d}">
+		<property name="assetPath">
+			<value>Music/Elevetaor.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>47.856326530612243</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b5bde69f-e650-4180-9b8a-1c52d0c22449}</destination>
+		</relationship>
+	</object>
+</objects>
