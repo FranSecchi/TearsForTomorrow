@@ -48,4 +48,14 @@ public class LevelMusicManager : MonoBehaviour
         musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         musicInstance.release();    
     }
+    private void OnTriggerEnter(Collider collider) {
+        if(collider.gameObject.CompareTag("Player")){
+            setElevator(States.True);
+        }
+    }
+    private void OnTriggerExit(Collider collider) {
+        if(collider.gameObject.CompareTag("Player")){
+            setElevator(States.False);
+        }
+    }
 }
