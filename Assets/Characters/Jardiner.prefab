@@ -147,7 +147,6 @@ GameObject:
   - component: {fileID: 596784264355163908}
   - component: {fileID: 4491688871898601503}
   - component: {fileID: 4284093217124937678}
-  - component: {fileID: 8876181378412070127}
   m_Layer: 6
   m_Name: Jardiner
   m_TagString: Untagged
@@ -208,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NewConversation: {fileID: 11400000, guid: b907e977b866ea748b2be220f5a9b720, type: 2}
-  DialogueManager: {fileID: 8876181378412070127}
+  DialogueManager: {fileID: 0}
   StandPosition: {fileID: 5687726030056890423}
   talker: {fileID: 7121817948779573006}
 --- !u!136 &4491688871898601503
@@ -249,24 +248,6 @@ MonoBehaviour:
   convo: {fileID: 596784264355163908}
   newConvo: {fileID: 11400000, guid: 8803862929d89ef489378f658482f74a, type: 2}
   itemKey: nShovel
---- !u!114 &8876181378412070127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 515107819511609645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14002495ccc33594893c0613008c8787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DialoguePanel: {fileID: 9098517926012944375}
-  Name: {fileID: 4872414464368428975}
-  Speech: {fileID: 8009433093578606123}
-  Options:
-  - {fileID: 4968111193594343569}
-  PointTo: {fileID: 0}
 --- !u!1 &1742116432510356421
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,7 +503,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8876181378412070127}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
         m_MethodName: OptionChosen
         m_Mode: 3

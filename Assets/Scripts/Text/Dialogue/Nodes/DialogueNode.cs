@@ -6,5 +6,7 @@ using UnityEngine;
 public class DialogueNode : ScriptableObject
 {
     public List<DialogueOption> Options;
+    public float RespostaTime;
+    public string RespostaKeyText;
     public string NodeKeyText;
 }

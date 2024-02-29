@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1131965524935408527}
   - component: {fileID: 3667220951851363839}
   - component: {fileID: 1623863634321718427}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Polaroid
   m_TagString: Untagged
   m_Icon: {fileID: 0}

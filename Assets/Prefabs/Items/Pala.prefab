@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8509570928850400255}
   - component: {fileID: 6625616438414325086}
   - component: {fileID: 6715076748087723360}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pala
   m_TagString: Untagged
   m_Icon: {fileID: 0}

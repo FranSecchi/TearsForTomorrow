@@ -15,4 +15,6 @@ MonoBehaviour:
   Options:
   - OptionKeyText: Ok
     NextNode: {fileID: 11400000, guid: 0c83a83a16bd2974aa5e5b0b6bda786b, type: 2}
+  RespostaTime: 0
+  RespostaKeyText: Jardiner00_ans
   NodeKeyText: JardinerPala00

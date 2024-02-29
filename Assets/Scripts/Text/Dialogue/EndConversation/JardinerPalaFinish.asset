@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: JardinerPalaFinish
   m_EditorClassIdentifier: 
   Options: []
+  RespostaTime: 0
+  RespostaKeyText: Bye
   NodeKeyText: Bye
