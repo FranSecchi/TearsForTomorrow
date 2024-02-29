@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, Saveable
 {
     public LayerMask whatCanBeClickedOn;
 
@@ -106,7 +106,7 @@ public class PlayerMovement : MonoBehaviour
         }
         return false;
     }
-
+    
     private void CheckInteract()
     {
         Vector3 playerPosition = new Vector3(transform.position.x, 0f, transform.position.z);
@@ -116,5 +116,17 @@ public class PlayerMovement : MonoBehaviour
             interactWith.Interact(true);
             interacting = false;
         }
+    }
+
+    public void Save(ref GameData gameData)
+    {
+        gameData.playerPos = transform.position;
+        gameData.playerForward = transform.forward; 
+    }
+
+    public void Load(GameData gameData)
+    {
+        transform.position = gameData.playerPos;
+        transform.forward = gameData.playerForward;
     }
 }

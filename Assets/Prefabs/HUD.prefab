@@ -6208,6 +6208,7 @@ MonoBehaviour:
   usingItemPanel: {fileID: 7671043980350647347}
   nameText: {fileID: 3376104978372585348}
   descriptionText: {fileID: 7755998361939146876}
+  useText: {fileID: 766002633498560448}
 --- !u!1 &7671043980350647347
 GameObject:
   m_ObjectHideFlags: 0

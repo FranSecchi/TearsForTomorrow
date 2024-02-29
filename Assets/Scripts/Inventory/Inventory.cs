@@ -52,7 +52,7 @@ public class Inventory : MonoBehaviour
     {
         if (selected.prefab == null)
             return;
-        currentItem = selected.prefab == null ? Instantiate(selected.prefab) : selected.prefab;
+        currentItem = Instantiate(selected.prefab);
         currentItem.parent = objectOnHand;
         currentItem.gameObject.SetActive(false);
         items.Remove(selected);
@@ -65,8 +65,7 @@ public class Inventory : MonoBehaviour
     internal void ReturnItem(ItemInfo item)
     {
         PlayerAnimation.instance.TakeItem(null);
-        currentItem.parent = null;
-        currentItem.gameObject.SetActive(false);
+        Destroy(currentItem.gameObject);
         currentItem = null;
         Add(item);
     }

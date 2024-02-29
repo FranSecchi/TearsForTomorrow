@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030d9ea20fca24e4b940c1c65583de32, type: 3}
   m_Name: FotoRecepPassat
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 6100905370225005790, guid: dec3d173798a057429f761c0a7b15a41, type: 3}
   img: {fileID: 21300000, guid: 031e09f6cdf9a874eb6a161aad2be580, type: 3}
   nameKey: nPicturePast
   descriptionKey: dPicturePast

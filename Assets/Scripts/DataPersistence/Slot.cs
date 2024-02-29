@@ -43,16 +43,14 @@ public class Slot : MonoBehaviour
         }
         else
         {
-            dataManager.NewGame(slot);
-            dataManager.LoadGame(slot);
             confirmationPanel.SetActive(false);
+            GameManager.instance.LoadNewGame(slot);
             //GameManager.LoadScene...
         }
     }
     private void ContinueGame()
     {
-        dataManager.LoadGame(slot);
-        //GameManager.LoadScene...
+        GameManager.instance.LoadGame(slot);
     }
 
     public void OnClick()
@@ -69,9 +67,7 @@ public class Slot : MonoBehaviour
     }
     public void Confirm()
     {
-        dataManager.NewGame(selected);
-        dataManager.LoadGame(selected);
         confirmationPanel.SetActive(false);
-        //GameManager.LoadScene...
+        GameManager.instance.LoadNewGame(slot);
     }
 }
