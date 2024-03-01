@@ -125,6 +125,13 @@ MonoBehaviour:
   whatCanBeClickedOn:
     serializedVersion: 2
     m_Bits: 200
+  stepSoundRef:
+    Guid:
+      Data1: -1427209505
+      Data2: 1150386833
+      Data3: 44990352
+      Data4: 1930926900
+    Path: event:/Steps
 --- !u!114 &3707059490825768462
 MonoBehaviour:
   m_ObjectHideFlags: 0
