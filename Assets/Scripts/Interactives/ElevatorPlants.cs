@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class ElevatorPlants : MonoBehaviour, Interactuable
 {
+    public bool first_time = true;
+    public bool open = false;
     public GameObject current;
     public GameObject Panel;
     public GameObject codeInputPanel;
@@ -42,7 +44,12 @@ public class ElevatorPlants : MonoBehaviour, Interactuable
 
     public void Interact(bool activate)
     {
-        codeInputPanel.SetActive(!codeInputPanel.activeSelf);
+        if(first_time){
+            LoadScene(1);
+            anim.SetTrigger("Open");
+            first_time = false;
+        }
+        else{codeInputPanel.SetActive(!codeInputPanel.activeSelf);}
     }
     public void CheckCode()
     {
