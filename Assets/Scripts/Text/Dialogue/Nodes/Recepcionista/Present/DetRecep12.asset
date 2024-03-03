@@ -15,6 +15,6 @@ MonoBehaviour:
   Options:
   - OptionKeyText: Next
     NextNode: {fileID: 11400000, guid: 553d9f948f3e2bf4a92ffd93d658f1f9, type: 2}
-  RespostaTime: 1
+  RespostaTime: 3
   RespostaKeyText: DetectiveIntro_12
   NodeKeyText: RecepIntro_12

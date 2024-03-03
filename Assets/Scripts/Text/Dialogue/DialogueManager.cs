@@ -16,6 +16,7 @@ public abstract class DialogueManager : LocalizedText
     private GameObject talking;
     private DialogueNode currentNode;
     private bool conversating = false;
+    private bool showAnswer = false;
 
     public bool Conversating { get => conversating; set => conversating = value; }
 
@@ -78,8 +79,12 @@ public abstract class DialogueManager : LocalizedText
         for (int i = 0; i < Options.Length; i++)
         {
             Options[i].transform.parent.gameObject.SetActive(false);
+        } 
+        while (!showAnswer)
+        {
+            yield return null;
         }
-        yield return new WaitForSeconds(node.RespostaTime);
+        showAnswer = false;
         Speech.text = "";
         Answer.text = GetText(node.RespostaKeyText, TextType.Dialeg);
         for (int i = 0; i < node.Options.Count; i++)
@@ -88,7 +93,10 @@ public abstract class DialogueManager : LocalizedText
             Options[i].text = GetText(node.Options[i].OptionKeyText, TextType.Dialeg);
         }
     }
-
+    public void ShowAnswer()
+    {
+        showAnswer = true;
+    }
     protected override void OnLanguageChanged()
     {
         if (currentNode != null)
