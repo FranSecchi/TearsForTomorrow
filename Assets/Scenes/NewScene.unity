@@ -2186,6 +2186,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 3.3
       objectReference: {fileID: 0}
+    - target: {fileID: 2317150359624677872, guid: d9abb0bbb1f416a41a0a1ae8b09fedc7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.57
+      objectReference: {fileID: 0}
     - target: {fileID: 2437491445633453567, guid: d9abb0bbb1f416a41a0a1ae8b09fedc7, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.96
@@ -2203,12 +2207,16 @@ PrefabInstance:
       value: 7.76
       objectReference: {fileID: 0}
     - target: {fileID: 2642340981982600406, guid: d9abb0bbb1f416a41a0a1ae8b09fedc7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.474
+      objectReference: {fileID: 0}
+    - target: {fileID: 2642340981982600406, guid: d9abb0bbb1f416a41a0a1ae8b09fedc7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.33100003
+      value: 0.339
       objectReference: {fileID: 0}
     - target: {fileID: 2642340981982600406, guid: d9abb0bbb1f416a41a0a1ae8b09fedc7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.19900006
+      value: 0.293
       objectReference: {fileID: 0}
     - target: {fileID: 2642340981982600406, guid: d9abb0bbb1f416a41a0a1ae8b09fedc7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2581,6 +2589,22 @@ PrefabInstance:
     - target: {fileID: 8817950135577972030, guid: d9abb0bbb1f416a41a0a1ae8b09fedc7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.962
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162406850316278807, guid: d9abb0bbb1f416a41a0a1ae8b09fedc7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162406850316278807, guid: d9abb0bbb1f416a41a0a1ae8b09fedc7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204903903316625215, guid: d9abb0bbb1f416a41a0a1ae8b09fedc7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204903903316625215, guid: d9abb0bbb1f416a41a0a1ae8b09fedc7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.52
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
