@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 292024877620008081}
   - component: {fileID: 5739499750635850099}
   - component: {fileID: 4491688871898601503}
+  - component: {fileID: -186244812088132276}
   m_Layer: 6
   m_Name: Mestressa Vell
   m_TagString: Untagged
@@ -215,6 +216,25 @@ CapsuleCollider:
   m_Height: 1.3400728
   m_Direction: 1
   m_Center: {x: -0.012642384, y: 0.6908898, z: 0}
+--- !u!114 &-186244812088132276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515107819511609645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &1742116432510356421
 GameObject:
   m_ObjectHideFlags: 0

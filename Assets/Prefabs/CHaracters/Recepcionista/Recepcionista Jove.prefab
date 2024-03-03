@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 3101042006101903809}
   - component: {fileID: 4288056289163773906}
   - component: {fileID: 4034190861210717897}
+  - component: {fileID: 8807540082688308305}
   m_Layer: 6
   m_Name: Recepcionista Jove
   m_TagString: Untagged
@@ -286,6 +287,7 @@ MonoBehaviour:
   DialogueManager: {fileID: 0}
   StandPosition: {fileID: 5619133383922532122}
   talker: {fileID: 2991437022501093398}
+  Repeat: {fileID: 0}
 --- !u!136 &4034190861210717897
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -309,6 +311,25 @@ CapsuleCollider:
   m_Height: 1.6004715
   m_Direction: 1
   m_Center: {x: 0, y: 0.805125, z: 0}
+--- !u!114 &8807540082688308305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2991437022501093398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &3059712473033962561
 GameObject:
   m_ObjectHideFlags: 0
