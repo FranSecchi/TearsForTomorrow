@@ -9,7 +9,6 @@ public abstract class DialogueManager : LocalizedText
 {
     //Definir botons al GameObject amb aquest Script per escollir opcions
     public GameObject DialoguePanel;
-    public GameObject AnswerBtn;
     public TextMeshProUGUI Name;
     public TextMeshProUGUI Speech;
     public TextMeshProUGUI Answer;
@@ -77,8 +76,6 @@ public abstract class DialogueManager : LocalizedText
     private IEnumerator PrintAnswer(DialogueNode node)
     {
         Answer.text = "";
-        if(node.RespostaKeyText != "...")
-            AnswerBtn.SetActive(true);
         for (int i = 0; i < Options.Length; i++)
         {
             Options[i].transform.parent.gameObject.SetActive(false);
@@ -98,7 +95,6 @@ public abstract class DialogueManager : LocalizedText
     }
     public void ShowAnswer()
     {
-        AnswerBtn.SetActive(false);
         showAnswer = true;
     }
     protected override void OnLanguageChanged()
