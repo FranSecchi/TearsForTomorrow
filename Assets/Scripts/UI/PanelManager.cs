@@ -22,7 +22,8 @@ public class PanelManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.I))
         {
-            Show(inventoryPanel);
+            if(inventoryPanel != null)
+                Show(inventoryPanel);
         }
     }
     public void Show(GameObject go)

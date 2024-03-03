@@ -40,7 +40,6 @@ public class GameManager : MonoBehaviour
     }
     public void AddSaveable(Saveable saveable)
     {
-        Debug.Log("Added");
         salvables.Add(saveable);
     }
     internal void SaveData(ref GameData gameData)
@@ -59,7 +58,6 @@ public class GameManager : MonoBehaviour
         //player.forward = gameData.rotation;
         foreach (Saveable s in salvables)
         {
-            Debug.Log("Load");
             s.Load(gameData);
         }
     }

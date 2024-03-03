@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NewScene.unity
     guid: 2e5ee7c344a2d7441945d508e0ace661
+  - enabled: 1
+    path: Assets/Scenes/FranTestingScene.unity
+    guid: 5fc90fb3b09300d4ab144da1f3cb2dc7
   m_configObjects: {}

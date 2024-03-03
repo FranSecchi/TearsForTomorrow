@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour, Saveable
     private void Awake()
     {
         _gm = GameManager.instance;
-        //_gm.AddSaveable(GetComponent<Saveable>());
+        _gm.AddSaveable(GetComponent<Saveable>());
     }
     void Start()
     {

@@ -47,7 +47,7 @@ DetectiveBuganvilla_34;;;(Creo que no es el momento para discutir. Debería saca
 DetectiveBuganvilla_35;;;(Pero no podrías echarla si es ella quien tenía el dinero. Así que en su cabeza, si es tan retorcida como extremista, no quedaría otra opción que… Debería seguirle el rollo.) Lo siento si he puesto en duda el honor de la señorita Rosa.
 DetectiveBuganvilla_End;;;Lo entiendo. Bueno, necesitaré hacer algunas investigaciones adicionales. Por favor, no se mueva de este hotel y asegúrese de estar disponible si necesito hacerle más preguntas.
 BuganvillaDetective_00;;;Ah, detective, qué bueno que estás aquí. Sí, sí, es una tragedia, una verdadera tragedia. Pero sabes, la vida sigue, ¿no es así?
-BuganvillaDetective_01;;;(No para su esposa-) Sí, por supuesto. Me gustaría hacerle algunas preguntas sobre su esposa y lo que ocurrió en este hotel.
+BuganvillaDetective_01;;;Claro, adelante. Pregunte lo que quiera. Estoy aquí para cooperar en lo que sea necesario.
 BuganvillaDetective_10;;;Ah, detective, es solo mi forma de ser, ya sabes. Siempre trato de mantenerme positivo, incluso en momentos difíciles como este.
 BuganvillaDetective_11;;;No es un lujo, inspector. A pesar de mi apariencia no me permito ninguno.
 BuganvillaDetective_12;;;Claro, adelante. Estoy aquí para cooperar en lo que sea necesario.  (vuelta a la decisión de diálogos)
