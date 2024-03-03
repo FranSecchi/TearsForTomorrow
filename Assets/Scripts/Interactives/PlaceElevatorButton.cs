@@ -28,7 +28,8 @@ public class PlaceElevatorButton : MonoBehaviour, Usable, Saveable
             inPlace = true;
             Destroy(item);
             btn.SetActive(true);
-            btn.GetComponent<Item>().InteractPanel.SetActive(false);
+            GameObject go = btn.GetComponent<Item>().InteractPanel;
+            if(go != null) go.SetActive(false);
             return true;
         }
         return false;
