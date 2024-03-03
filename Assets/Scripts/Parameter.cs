@@ -11,10 +11,12 @@ public static class Parameter
     private const string ELEVATOR_BTN = "nElevatorBtn";
     private const string DOOR_KEY = "nKey";
     private const string POLAROID_KEY = "nPolaroid";
+    private const string AGULLA_CORDA = "nNeedleRope";
     public static string StartMenu_SCENE => STARTMENU_SCENE;
     public static string Present_SCENE => PRESENT_SCENE;
     public static string Str_CofreKey => COFRE_KEY;
     public static string Str_ElevBtn => ELEVATOR_BTN;
     public static string Str_DoorKey => DOOR_KEY;
     public static string Str_Polaroid => POLAROID_KEY;
+    public static string Str_Agulla => AGULLA_CORDA;
 }
