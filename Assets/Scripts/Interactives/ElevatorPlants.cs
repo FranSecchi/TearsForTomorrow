@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class ElevatorPlants : MonoBehaviour, Interactuable
 {
-    public bool first_time = true;
-    public bool open = false;
+    public static bool first_time = true;
     public GameObject current;
     public GameObject Panel;
     public GameObject codeInputPanel;
-    public Animator anim;
     public Transform StandPoint;
     public List<GameObject> Maps;
     public TMP_InputField codeInputField;
+    public GameObject doors;
     private void Start()
     {
         Panel.SetActive(false);
@@ -28,25 +28,32 @@ public class ElevatorPlants : MonoBehaviour, Interactuable
         if (current.name.Equals(Maps[epoca].name))
             return;
         ShaderModifier.changeShader((Times)epoca);
-        StartCoroutine(ChangeMap(Maps[epoca]));
+        LevelMusicManager.setTime((Times)epoca);
+        ChangeMap(Maps[epoca]);
         
     }
-    IEnumerator ChangeMap(GameObject map)
+    void ChangeMap(GameObject map)
     {
-        anim.SetTrigger("Close");
-        yield return new WaitForSeconds(4f);
-        anim.SetTrigger("Open");
-
         map.SetActive(true);
         current.SetActive(false);
         current = map;
+    }
+    public IEnumerator openDoors(){
+        doors.GetComponent<ElevatorDoors>().Interact(true);
+        yield return new WaitForSeconds(4f);
+        doors.GetComponent<ElevatorDoors>().Interact(false);
+    }
+    public IEnumerator closeDoors(){
+        doors.GetComponent<ElevatorDoors>().Interact(false);
+        yield return new WaitForSeconds(4f);
+        doors.GetComponent<ElevatorDoors>().Interact(false);
     }
 
     public void Interact(bool activate)
     {
         if(first_time){
-            anim.SetTrigger("Open");
-            first_time = false;
+            LoadScene(1);
+            StartCoroutine(openDoors());
         }
         else{codeInputPanel.SetActive(!codeInputPanel.activeSelf);}
     }

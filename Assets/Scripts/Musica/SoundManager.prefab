@@ -42,7 +42,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8686075477091220777}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e1b017a4caa69c4896d9d5fc0d4b33d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e5429ae46ed63f4b9f31dc9b34d3223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AscensorSound_Ref:
@@ -122,6 +122,20 @@ MonoBehaviour:
       Data3: -1079802466
       Data4: -551313268
     Path: event:/Vocals_Recepcionista
+  CofreSound_Ref:
+    Guid:
+      Data1: 1096932580
+      Data2: 1141123917
+      Data3: -1791892559
+      Data4: 1431780669
+    Path: event:/Chest
+  PhotoSound_Ref:
+    Guid:
+      Data1: -790908764
+      Data2: 1295689564
+      Data3: 2029703615
+      Data4: 145854279
+    Path: event:/Camera
 --- !u!65 &4921421876568424042
 BoxCollider:
   m_ObjectHideFlags: 0

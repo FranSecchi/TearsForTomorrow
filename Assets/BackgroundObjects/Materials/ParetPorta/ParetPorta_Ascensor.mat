@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cuadre_Presente
+  m_Name: ParetPorta_Ascensor
   m_Shader: {fileID: 4800000, guid: 16a834f6366f667489b2a9c12e220d4c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -27,7 +27,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: a0e33352dc844294c811b5d32489ddfa, type: 3}
+        m_Texture: {fileID: 2800000, guid: a13ac33a227f3e744acae669f1e047f3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -47,19 +47,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: f76b2de4e1547e34ba11e6c7961531ee, type: 3}
+        m_Texture: {fileID: 2800000, guid: 620e7367ea501194ca0ea4adae885b53, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 89a8280da6159764d89d2cb4e97aa3fc, type: 3}
+        m_Texture: {fileID: 2800000, guid: 32130492f768601438b2797e45fc909f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: aa5c0e971b3599448aacdbec7b74d8b5, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4b969a10e74a283469922641eae5e853, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: 66c86ffd10bba404c85e085368916238, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5b37bf9780a9c014894bdbe191d9c958, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -68,12 +68,12 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _GlossMapScale: 0.5
+    - _GlossMapScale: 0
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
-    - _OcclusionStrength: 0
+    - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

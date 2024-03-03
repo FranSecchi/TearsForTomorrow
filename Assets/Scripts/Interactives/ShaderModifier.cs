@@ -22,12 +22,14 @@ public class ShaderModifier : MonoBehaviour
     void FindAllObjects(){
         List<GameObject>Objects = FindObjectsOfType<GameObject>().ToList();
         foreach(GameObject obj in Objects){
-            Material mat;
-            MeshRenderer mesh;
-            if(obj.TryGetComponent(out mesh)){
-                mat = mesh.material;
-                if(!materials.Contains(mat))
-                    materials.Add(mat);
+            if(!obj.CompareTag("Ascensor")){
+                Material mat;
+                MeshRenderer mesh;
+                if(obj.TryGetComponent(out mesh)){
+                    mat = mesh.material;
+                    if(!materials.Contains(mat))
+                        materials.Add(mat);
+                }
             }
         }
     }

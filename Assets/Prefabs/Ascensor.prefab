@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 956344463169090795}
   m_Layer: 0
   m_Name: Ascensor
-  m_TagString: Untagged
+  m_TagString: Ascensor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 9147467970161512803}
   m_Layer: 6
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Ascensor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 6901377612479650966}
   m_Layer: 0
   m_Name: Cylinder006
-  m_TagString: Untagged
+  m_TagString: Ascensor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,6 +202,10 @@ PrefabInstance:
     - target: {fileID: 4661887103400905093, guid: 09f9416efe8e1394ca87635e62f20293, type: 3}
       propertyPath: m_Name
       value: paretAscensor_Atemporal (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661887103400905093, guid: 09f9416efe8e1394ca87635e62f20293, type: 3}
+      propertyPath: m_TagString
+      value: Ascensor
       objectReference: {fileID: 0}
     - target: {fileID: 5474557671893881663, guid: 09f9416efe8e1394ca87635e62f20293, type: 3}
       propertyPath: m_LocalPosition.x
@@ -332,6 +336,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParetAscensorAmbMirall
       objectReference: {fileID: 0}
+    - target: {fileID: 4498823941514344175, guid: 9301765e253306741a3ca8c4f6ef08de, type: 3}
+      propertyPath: m_TagString
+      value: Ascensor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -380,6 +388,10 @@ PrefabInstance:
     - target: {fileID: 4661887103400905093, guid: 09f9416efe8e1394ca87635e62f20293, type: 3}
       propertyPath: m_Name
       value: paretAscensor_Atemporal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661887103400905093, guid: 09f9416efe8e1394ca87635e62f20293, type: 3}
+      propertyPath: m_TagString
+      value: Ascensor
       objectReference: {fileID: 0}
     - target: {fileID: 5474557671893881663, guid: 09f9416efe8e1394ca87635e62f20293, type: 3}
       propertyPath: m_LocalPosition.x
@@ -469,6 +481,10 @@ PrefabInstance:
     - target: {fileID: 4661887103400905093, guid: 09f9416efe8e1394ca87635e62f20293, type: 3}
       propertyPath: m_Name
       value: paretAscensor_Atemporal (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661887103400905093, guid: 09f9416efe8e1394ca87635e62f20293, type: 3}
+      propertyPath: m_TagString
+      value: Ascensor
       objectReference: {fileID: 0}
     - target: {fileID: 5474557671893881663, guid: 09f9416efe8e1394ca87635e62f20293, type: 3}
       propertyPath: m_LocalPosition.x
@@ -571,6 +587,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2726382747068095389, guid: 58783dda537068d4286872cfb31728f6, type: 3}
+      propertyPath: m_TagString
+      value: Ascensor
+      objectReference: {fileID: 0}
     - target: {fileID: 3001798874468550190, guid: 58783dda537068d4286872cfb31728f6, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.242
@@ -582,6 +602,14 @@ PrefabInstance:
     - target: {fileID: 4032089941796630871, guid: 58783dda537068d4286872cfb31728f6, type: 3}
       propertyPath: m_Name
       value: "Bot\xF3Plantes"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4032089941796630871, guid: 58783dda537068d4286872cfb31728f6, type: 3}
+      propertyPath: m_TagString
+      value: Ascensor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4170905047604305426, guid: 58783dda537068d4286872cfb31728f6, type: 3}
+      propertyPath: m_TagString
+      value: Ascensor
       objectReference: {fileID: 0}
     - target: {fileID: 4235280602521314069, guid: 58783dda537068d4286872cfb31728f6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -622,6 +650,10 @@ PrefabInstance:
     - target: {fileID: 5009580806995355076, guid: 58783dda537068d4286872cfb31728f6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Mapa_Present
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809701711971964218, guid: 58783dda537068d4286872cfb31728f6, type: 3}
+      propertyPath: m_TagString
+      value: Ascensor
       objectReference: {fileID: 0}
     - target: {fileID: 6867282162897195359, guid: 58783dda537068d4286872cfb31728f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -683,6 +715,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Mapa_Present (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8591615857242526301, guid: 58783dda537068d4286872cfb31728f6, type: 3}
+      propertyPath: m_TagString
+      value: Ascensor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -720,6 +756,10 @@ PrefabInstance:
     - target: {fileID: 4661887103400905093, guid: 09f9416efe8e1394ca87635e62f20293, type: 3}
       propertyPath: m_Name
       value: paretAscensor_Atemporal (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661887103400905093, guid: 09f9416efe8e1394ca87635e62f20293, type: 3}
+      propertyPath: m_TagString
+      value: Ascensor
       objectReference: {fileID: 0}
     - target: {fileID: 5474557671893881663, guid: 09f9416efe8e1394ca87635e62f20293, type: 3}
       propertyPath: m_LocalPosition.x
@@ -810,6 +850,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: paretAscensor_Atemporal (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4661887103400905093, guid: 09f9416efe8e1394ca87635e62f20293, type: 3}
+      propertyPath: m_TagString
+      value: Ascensor
+      objectReference: {fileID: 0}
     - target: {fileID: 5474557671893881663, guid: 09f9416efe8e1394ca87635e62f20293, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.5
@@ -898,6 +942,10 @@ PrefabInstance:
     - target: {fileID: 4661887103400905093, guid: 09f9416efe8e1394ca87635e62f20293, type: 3}
       propertyPath: m_Name
       value: paretAscensor_Atemporal (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661887103400905093, guid: 09f9416efe8e1394ca87635e62f20293, type: 3}
+      propertyPath: m_TagString
+      value: Ascensor
       objectReference: {fileID: 0}
     - target: {fileID: 5474557671893881663, guid: 09f9416efe8e1394ca87635e62f20293, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1035,6 +1083,10 @@ PrefabInstance:
     - target: {fileID: 6463568101959009020, guid: ce34ff22520b99b4a9bc99b9c58f12d9, type: 3}
       propertyPath: m_Name
       value: Porta_Ascensor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463568101959009020, guid: ce34ff22520b99b4a9bc99b9c58f12d9, type: 3}
+      propertyPath: m_TagString
+      value: Ascensor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

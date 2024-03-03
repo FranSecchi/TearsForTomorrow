@@ -26,8 +26,13 @@ public class LevelMusicManager : MonoBehaviour
     void Start()
     {
         LevelMusic = LevelMusic_ref;
+        time = Times.Present;
+        elevetorState = States.True;
         musicInstance = RuntimeManager.CreateInstance(LevelMusic);
+        setTime(time);
+        setElevator(elevetorState);
         musicInstance.start();
+        
     }
 
     // Update is called once per frame

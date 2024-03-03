@@ -16,6 +16,7 @@ public class PlaceElevatorButton : MonoBehaviour, Usable
             Destroy(item.GetComponent<Item>());
             ElevatorDoors ed = item.GetComponent<ElevatorDoors>();
             ed.enabled = true;
+            ElevatorPlants.first_time = false;
             return true;
         }
         return false;
