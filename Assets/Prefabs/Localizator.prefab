@@ -44,5 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ac7a39d95b52f4da453131f0fae514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultLanguage: 2
-  DataSheet: {fileID: 4900000, guid: 2118f4d309117504abe74820b4736c56, type: 3}
+  DefaultLanguage: 3
+  TextDataSheet: {fileID: 4900000, guid: 2118f4d309117504abe74820b4736c56, type: 3}
+  DialegDataSheet: {fileID: 4900000, guid: 7a77aad583bd1944d999b2b5bd39d9b7, type: 3}

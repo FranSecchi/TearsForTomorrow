@@ -734,6 +734,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4900000, guid: 2118f4d309117504abe74820b4736c56, type: 3}
     - target: {fileID: 808114266961976044, guid: 74dc5a42f801504419f13f2d3bb63794, type: 3}
+      propertyPath: DefaultLanguage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 808114266961976044, guid: 74dc5a42f801504419f13f2d3bb63794, type: 3}
       propertyPath: DialegDataSheet
       value: 
       objectReference: {fileID: 4900000, guid: 7a77aad583bd1944d999b2b5bd39d9b7, type: 3}
