@@ -15,6 +15,7 @@ public class GameData
     public bool btnInPlace;
     public bool btnActive;
     public bool amaOpen;
+    public bool anellTaken;
 
     //public Vector3 position;
     //public Vector3 rotation;
@@ -26,8 +27,9 @@ public class GameData
         playerForward = Vector3.forward;
         cofreOpened = false;
         btnInPlace = false;
-        btnActive = false;
+        btnActive = true;
         amaOpen = false;
         epoca = 1;
+        anellTaken = false;
 }
 }
