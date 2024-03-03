@@ -1844,6 +1844,30 @@ PrefabInstance:
       value: Ascensor
       objectReference: {fileID: 0}
     - target: {fileID: 815323475023157050, guid: 4955284bd37130b499bc851709e6c062, type: 3}
+      propertyPath: m_Size.x
+      value: 0.094620354
+      objectReference: {fileID: 0}
+    - target: {fileID: 815323475023157050, guid: 4955284bd37130b499bc851709e6c062, type: 3}
+      propertyPath: m_Size.y
+      value: 0.18396711
+      objectReference: {fileID: 0}
+    - target: {fileID: 815323475023157050, guid: 4955284bd37130b499bc851709e6c062, type: 3}
+      propertyPath: m_Size.z
+      value: 0.18480575
+      objectReference: {fileID: 0}
+    - target: {fileID: 815323475023157050, guid: 4955284bd37130b499bc851709e6c062, type: 3}
+      propertyPath: m_Center.x
+      value: -0.045442645
+      objectReference: {fileID: 0}
+    - target: {fileID: 815323475023157050, guid: 4955284bd37130b499bc851709e6c062, type: 3}
+      propertyPath: m_Center.y
+      value: -0.003000021
+      objectReference: {fileID: 0}
+    - target: {fileID: 815323475023157050, guid: 4955284bd37130b499bc851709e6c062, type: 3}
+      propertyPath: m_Center.z
+      value: 0.04623726
+      objectReference: {fileID: 0}
+    - target: {fileID: 815323475023157050, guid: 4955284bd37130b499bc851709e6c062, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
