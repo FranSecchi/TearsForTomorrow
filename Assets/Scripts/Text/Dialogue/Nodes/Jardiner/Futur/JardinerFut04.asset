@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b34a5ce91bea92c48b1d89801d91903d, type: 3}
-  m_Name: JardinerPast01
+  m_Name: JardinerFut04
   m_EditorClassIdentifier: 
   Options:
   - OptionKeyText: Next
-    NextNode: {fileID: 11400000, guid: 3fe9a1a0a6b79264a9a370f1f81f12ed, type: 2}
+    NextNode: {fileID: 11400000, guid: dc0959fb6e7690542bc892d65ceb9684, type: 2}
   RespostaTime: 2
-  RespostaKeyText: JardineroDetective_Past01
-  NodeKeyText: DetectiveJardinero_Past01
+  RespostaKeyText: DetectiveJardinero_Fut04
+  NodeKeyText: JardineroDetective_Fut04

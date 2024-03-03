@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b34a5ce91bea92c48b1d89801d91903d, type: 3}
-  m_Name: Recepcionista_01
+  m_Script: {fileID: 11500000, guid: a21038fec93caea438407f096bd8e16b, type: 3}
+  m_Name: JardinerFutEnd
   m_EditorClassIdentifier: 
-  Options:
-  - OptionKeyText: Fine
-    NextNode: {fileID: 11400000, guid: 4edb56f061f397c4bb34984092b51ce2, type: 2}
-  NodeKeyText: Recep_01
+  Options: []
+  RespostaTime: 0
+  RespostaKeyText: JardineroDetective_FutEnd
+  NodeKeyText: ...

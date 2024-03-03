@@ -285,7 +285,7 @@ MonoBehaviour:
   NewConversation: {fileID: 11400000, guid: f774b5e0812282a448c4948914262497, type: 2}
   DialogueManager: {fileID: 0}
   StandPosition: {fileID: 5619133383922532122}
-  talker: {fileID: 2991437022501093398}
+  talker: {fileID: 6692694264310781992}
 --- !u!136 &4034190861210717897
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -904,5 +904,10 @@ PrefabInstance:
 --- !u!4 &6317117982048354962 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5544270424008699116, guid: 117f7a2581ac0a34cba4ec83e5d49d90, type: 3}
+  m_PrefabInstance: {fileID: 1971413107155119742}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6692694264310781992 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5168694485672949334, guid: 117f7a2581ac0a34cba4ec83e5d49d90, type: 3}
   m_PrefabInstance: {fileID: 1971413107155119742}
   m_PrefabAsset: {fileID: 0}
