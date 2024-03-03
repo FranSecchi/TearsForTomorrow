@@ -206,6 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccba18bd140cc0f4b93691c7bc7a7a4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisCamera: {fileID: 0}
   NewConversation: {fileID: 11400000, guid: b907e977b866ea748b2be220f5a9b720, type: 2}
   DialogueManager: {fileID: 0}
   StandPosition: {fileID: 5687726030056890423}
@@ -226,7 +227,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
