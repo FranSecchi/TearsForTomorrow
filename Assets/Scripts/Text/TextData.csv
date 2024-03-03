@@ -2,6 +2,7 @@ Key;English;Catalan;Spanish
 Start;Start;Començar;Empezar
 Finish;The End!;Final!;Fin!
 Ok;Okey;D'acord;Vale
+Yes;Yes;Si;Si
 Fine;Fine;Be;Bien
 Bye;Bye;Adeu;Adios
 Use;Use;Utilitzar;Utilizar
@@ -56,3 +57,4 @@ Quit; Quit; Sortir; Salir
 nPicturePresent;Picture;Fotografia;Foto Adam Lutece
 dPicturePresent;.;.;Se parece demasiado a su padre y su hijo
 Next;Next;Següent;Siguiente
+confirmNew;Creating a new game will delete all current progress! Are you sure?;.;Crear una nueva partida borrará todo progreso! Seguro?
