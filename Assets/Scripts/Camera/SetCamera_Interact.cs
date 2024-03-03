@@ -12,6 +12,10 @@ public class SetCamera_Interact : CameraController, Interactuable
 
     public void Interact(bool activate)
     {
+        if(parent == null)
+        {
+            return;
+        }
         if (activate)
         {
             gm.CurrentCamera = thisCamera;
