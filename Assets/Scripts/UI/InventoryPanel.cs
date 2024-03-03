@@ -90,8 +90,8 @@ public class InventoryPanel : LocalizedText
 
         if (index >= 0 && index < items.Count)
         {
-            descriptionText.text = GetText(items[index].descriptionKey);
-            nameText.text = GetText(items[index].nameKey);
+            descriptionText.text = GetText(items[index].descriptionKey, TextType.Simple);
+            nameText.text = GetText(items[index].nameKey, TextType.Simple);
         }
     }
     private void OnEnable()
@@ -107,13 +107,13 @@ public class InventoryPanel : LocalizedText
         items = inventory.Items;
         GameObject p;
         usingItemPanel.SetActive(false);
-        useText.text = GetText("Use");
+        useText.text = GetText("Use", TextType.Simple);
         if (inventory.CurrentItem != null)
         {
             Image im = usingItemPanel.transform.GetChild(1).GetComponent<Image>();
             im.sprite = _using.img;
             usingItemPanel.SetActive(true);
-            useText.text = GetText("Unuse");
+            useText.text = GetText("Unuse", TextType.Simple);
         }
         foreach (GameObject panel in panels)
             panel.SetActive(false);

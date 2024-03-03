@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b34a5ce91bea92c48b1d89801d91903d, type: 3}
-  m_Name: Recepcionista_00
+  m_Name: DetRecep32
   m_EditorClassIdentifier: 
   Options:
-  - OptionKeyText: Recep_Opt1
-    NextNode: {fileID: 11400000, guid: a670eacebd65d1d409eb5877b333ddbf, type: 2}
-  - OptionKeyText: Recep_Opt2
-    NextNode: {fileID: 11400000, guid: 7683bdb2a61c0a340aaa3cda84333710, type: 2}
-  NodeKeyText: Recep_00
+  - OptionKeyText: Next
+    NextNode: {fileID: 11400000, guid: 9b73b74181d6f094eb55b28488091a8f, type: 2}
+  RespostaTime: 1
+  RespostaKeyText: DetectiveIntro_32
+  NodeKeyText: RecepIntro_32

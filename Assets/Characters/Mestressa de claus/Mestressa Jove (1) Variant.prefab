@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5045645741861389169
+--- !u!1001 &7147856050115024049
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,10 +11,10 @@ PrefabInstance:
     - target: {fileID: 7063224489023790161, guid: 1e5778f0500c2f2488262d769f0afdd6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e186d778096d17f4b8a5b071adb4b5fd, type: 2}
+      objectReference: {fileID: 2100000, guid: ef7244365a3535b4e8374dcddd856785, type: 2}
     - target: {fileID: 7296868525188316258, guid: 1e5778f0500c2f2488262d769f0afdd6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.1600444
+      value: 3.1575544
       objectReference: {fileID: 0}
     - target: {fileID: 7296868525188316258, guid: 1e5778f0500c2f2488262d769f0afdd6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296868525188316258, guid: 1e5778f0500c2f2488262d769f0afdd6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.820548
+      value: -11.123975
       objectReference: {fileID: 0}
     - target: {fileID: 7296868525188316258, guid: 1e5778f0500c2f2488262d769f0afdd6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -54,10 +54,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7928727812656309976, guid: 1e5778f0500c2f2488262d769f0afdd6, type: 3}
       propertyPath: m_Name
-      value: Mestressa Jove Variant
+      value: Mestressa Jove (1) Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7928727812656309976, guid: 1e5778f0500c2f2488262d769f0afdd6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5142806304159240197}
   m_SourcePrefab: {fileID: 100100000, guid: 1e5778f0500c2f2488262d769f0afdd6, type: 3}
+--- !u!1 &953134585881309801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7928727812656309976, guid: 1e5778f0500c2f2488262d769f0afdd6, type: 3}
+  m_PrefabInstance: {fileID: 7147856050115024049}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &-5142806304159240197
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953134585881309801}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

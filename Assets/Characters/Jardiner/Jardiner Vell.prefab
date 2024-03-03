@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b33b4374a9d6dda449c19e7678f5c0cc, type: 2}
     - target: {fileID: 2642216350022907929, guid: ddddf8f83f1804a469cb9d7cecc70386, type: 3}
       propertyPath: m_Name
-      value: Jove (1) Variant
+      value: Jardiner Vell
       objectReference: {fileID: 0}
     - target: {fileID: 3449996363459748515, guid: ddddf8f83f1804a469cb9d7cecc70386, type: 3}
       propertyPath: m_LocalPosition.x
@@ -71,5 +71,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2642216350022907929, guid: ddddf8f83f1804a469cb9d7cecc70386, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4867331954170497723}
   m_SourcePrefab: {fileID: 100100000, guid: ddddf8f83f1804a469cb9d7cecc70386, type: 3}
+--- !u!1 &5012852129094381858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2642216350022907929, guid: ddddf8f83f1804a469cb9d7cecc70386, type: 3}
+  m_PrefabInstance: {fileID: 7005969030072961339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4867331954170497723
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5012852129094381858}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 574b6ea952289614a80a1f90f9278f71, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

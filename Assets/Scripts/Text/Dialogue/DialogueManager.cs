@@ -46,12 +46,12 @@ public abstract class DialogueManager : LocalizedText
     private void DoEndNode(EndNode endNode)
     {
         endNode.OnChosen(talking);
-        conversating = false;
-        PlayerAnimation.instance.Talk(false);
+        FinishConversation();
     }
 
     internal void FinishConversation()
     {
+        PlayerAnimation.instance.Talk(false);
         conversating = false;
         HideDialogue();
     }
@@ -68,7 +68,7 @@ public abstract class DialogueManager : LocalizedText
     }
     private void SetText(DialogueNode node)
     {
-        Speech.text = GetText(node.NodeKeyText);
+        Speech.text = GetText(node.NodeKeyText, TextType.Dialeg);
         StartCoroutine(PrintAnswer(node));
     }
 
@@ -80,11 +80,12 @@ public abstract class DialogueManager : LocalizedText
             Options[i].transform.parent.gameObject.SetActive(false);
         }
         yield return new WaitForSeconds(node.RespostaTime);
-        Answer.text = GetText(node.RespostaKeyText);
+        Speech.text = "";
+        Answer.text = GetText(node.RespostaKeyText, TextType.Dialeg);
         for (int i = 0; i < node.Options.Count; i++)
         {
             Options[i].transform.parent.gameObject.SetActive(true);
-            Options[i].text = GetText(node.Options[i].OptionKeyText);
+            Options[i].text = GetText(node.Options[i].OptionKeyText, TextType.Dialeg);
         }
     }
 

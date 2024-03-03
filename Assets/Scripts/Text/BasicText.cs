@@ -13,11 +13,11 @@ public class BasicText : LocalizedText
     }
     private void Start()
     {
-        _text.text = GetText(Key);
+        _text.text = GetText(Key, TextType.Simple);
     }
 
     protected override void OnLanguageChanged()
     {
-        _text.text = GetText(Key);
+        _text.text = GetText(Key, TextType.Simple);
     }
 }

@@ -67,18 +67,18 @@ public class GameManager : MonoBehaviour
     public void LoadGame(GameSlot slot)
     {
         gameSlot = slot;
-        SceneManager.LoadScene("NewScene");
+        SceneManager.LoadScene("FranTestingScene");
     }
 
     internal void LoadNewGame(GameSlot slot)
     {
         gameSlot = slot;
         dataManager.NewGame(gameSlot);
-        SceneManager.LoadScene("NewScene");
+        SceneManager.LoadScene("FranTestingScene");
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "NewScene")
+        if (scene.name == "FranTestingScene")
         {
             dataManager.LoadGame(gameSlot);
         }

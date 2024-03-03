@@ -4,18 +4,25 @@ using UnityEngine;
 using System.Linq;
 using System;
 
+public enum TextType
+{
+    Simple,
+    Dialeg
+}
 public class Localizator : MonoBehaviour
 {
 
     public static Localizator Instance;
 
-    Dictionary<string, LanguageData> Data;
+    Dictionary<string, LanguageData> TextData;
+    Dictionary<string, LanguageData> DialegData;
     private Language _currentLanguage;
     public Language DefaultLanguage;
 
 
-    public TextAsset DataSheet;
-    
+    public TextAsset TextDataSheet;
+    public TextAsset DialegDataSheet;
+
 
     public delegate void LanguageChangeDelegate();
     public static LanguageChangeDelegate OnLanguageChangeDelegate;
@@ -28,9 +35,12 @@ public class Localizator : MonoBehaviour
     }
 
 
-    public static string GetText(string textKey)
+    public static string GetText(string textKey, TextType type)
     {
-        return Instance.Data[textKey].GetText(Instance._currentLanguage);
+        if(type.Equals(TextType.Dialeg))
+            return Instance.DialegData[textKey].GetText(Instance._currentLanguage);
+        else
+            return Instance.TextData[textKey].GetText(Instance._currentLanguage);
     }
 
     public static void SetLanguage(Language language)
@@ -41,21 +51,36 @@ public class Localizator : MonoBehaviour
 
     void ReadSheet()
     {
-        string[] lines = DataSheet.text.Split(new char[]{ '\n'});
+        string[] lines = DialegDataSheet.text.Split(new char[]{ '\n'});
         for (int i = 1; i < lines.Length; i++)
         {
             if (lines.Length > 1)
-                AddNewDataEntry(lines[i]);
+                AddNewDialegDataEntry(lines[i]);
+        }
+        string[] texts = TextDataSheet.text.Split(new char[] { '\n' });
+        for (int i = 1; i < texts.Length; i++)
+        {
+            if (texts.Length > 1)
+                AddNewTextDataEntry(texts[i]);
         }
     }
 
-    void AddNewDataEntry(string s)
+    void AddNewDialegDataEntry(string s)
     {
         //Debug.Log(s);
         string[] t = s.Split(new char[] { ';' });
         var languageData = new LanguageData(t); 
-        if (Data == null)
-            Data = new Dictionary<string, LanguageData>();
-        Data.Add(t[0], languageData);
+        if (DialegData == null)
+            DialegData = new Dictionary<string, LanguageData>();
+        DialegData.Add(t[0], languageData);
+    }
+    void AddNewTextDataEntry(string s)
+    {
+        //Debug.Log(s);
+        string[] t = s.Split(new char[] { ';' });
+        var languageData = new LanguageData(t);
+        if (TextData == null)
+            TextData = new Dictionary<string, LanguageData>();
+        TextData.Add(t[0], languageData);
     }
 }

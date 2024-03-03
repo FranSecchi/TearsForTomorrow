@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 5c6f2feb471b3d54aa954d821b504716, type: 2}
     - target: {fileID: 6062007405840695486, guid: 2e3e1be6cf0de2d4a983869f47dbcea6, type: 3}
       propertyPath: m_Name
-      value: Jove Variant
+      value: Jardiner Adult
       objectReference: {fileID: 0}
     - target: {fileID: 6875663141231680004, guid: 2e3e1be6cf0de2d4a983869f47dbcea6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -71,5 +71,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6062007405840695486, guid: 2e3e1be6cf0de2d4a983869f47dbcea6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4136384059033090331}
   m_SourcePrefab: {fileID: 100100000, guid: 2e3e1be6cf0de2d4a983869f47dbcea6, type: 3}
+--- !u!1 &2642216350022907929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6062007405840695486, guid: 2e3e1be6cf0de2d4a983869f47dbcea6, type: 3}
+  m_PrefabInstance: {fileID: 8109745270989011111}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4136384059033090331
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2642216350022907929}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 574b6ea952289614a80a1f90f9278f71, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
