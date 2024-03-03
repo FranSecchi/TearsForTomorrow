@@ -595,6 +595,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 292024877620008081, guid: 541668df079a5904c8f0901e93fcb762, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 515107819511609645, guid: 541668df079a5904c8f0901e93fcb762, type: 3}
       propertyPath: m_Name
       value: Jardiner
