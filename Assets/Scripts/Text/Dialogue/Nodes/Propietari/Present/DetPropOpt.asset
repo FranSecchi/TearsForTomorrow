@@ -16,9 +16,9 @@ MonoBehaviour:
   - OptionKeyText: DetectiveBuganvilla_Op1
     NextNode: {fileID: 11400000, guid: 61cf1713cf9bb644b8dcec5475881ea0, type: 2}
   - OptionKeyText: DetectiveBuganvilla_Op2
-    NextNode: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: e8f86dac4c9824d4284ea80c39827fe2, type: 2}
   - OptionKeyText: DetectiveBuganvilla_Op3
-    NextNode: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: 4ff9893832eec404e9f70da838e4494d, type: 2}
   RespostaTime: 2
-  RespostaKeyText: DetectiveBuganvilla_Ans
-  NodeKeyText: ...
+  RespostaKeyText: ...
+  NodeKeyText: DetectiveBuganvilla_Ans
