@@ -15,6 +15,7 @@ public class ElevatorPlants : MonoBehaviour, Interactuable, Saveable
     public List<GameObject> Maps;
     public TMP_InputField codeInputField;
     public Animator anim;
+    public GameObject doorMestresa;
     private int epoca;
     private void Awake()
     {
@@ -48,6 +49,7 @@ public class ElevatorPlants : MonoBehaviour, Interactuable, Saveable
     {
         anim.SetTrigger("Close");
         yield return new WaitForSeconds(2f);
+        doorMestresa.SetActive(epoca != 0);
         ChangeMap(Maps[epoca]);
         yield return new WaitForSeconds(5f);
         anim.SetTrigger("Open");

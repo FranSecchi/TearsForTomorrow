@@ -16,6 +16,11 @@ public class Cofre : MonoBehaviour, Usable, Saveable
     public void Load(GameData gameData)
     {
         opened = gameData.cofreOpened;
+        if (opened)
+        {
+            OpenCofre();
+            inventory.SetActive(false);
+        }
     }
 
     public void Save(ref GameData gameData)
