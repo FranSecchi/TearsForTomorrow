@@ -7,14 +7,15 @@ using Unity.VisualScripting;
 
 public class ElevatorPlants : MonoBehaviour, Interactuable
 {
-    public static bool first_time = true;
+    private bool first_time = true;
     public GameObject current;
     public GameObject Panel;
     public GameObject codeInputPanel;
     public Transform StandPoint;
     public List<GameObject> Maps;
     public TMP_InputField codeInputField;
-    public GameObject doors;
+    public Animator anim;
+    private int epoca;
     private void Start()
     {
         Panel.SetActive(false);
@@ -29,8 +30,8 @@ public class ElevatorPlants : MonoBehaviour, Interactuable
             return;
         ShaderModifier.changeShader((Times)epoca);
         LevelMusicManager.setTime((Times)epoca);
-        ChangeMap(Maps[epoca]);
-        
+        this.epoca = epoca;
+        StartCoroutine(LoadMap());        
     }
     void ChangeMap(GameObject map)
     {
@@ -38,24 +39,31 @@ public class ElevatorPlants : MonoBehaviour, Interactuable
         current.SetActive(false);
         current = map;
     }
-    public IEnumerator openDoors(){
-        doors.GetComponent<ElevatorDoors>().Interact(true);
-        yield return new WaitForSeconds(4f);
-        doors.GetComponent<ElevatorDoors>().Interact(false);
-    }
-    public IEnumerator closeDoors(){
-        doors.GetComponent<ElevatorDoors>().Interact(false);
-        yield return new WaitForSeconds(4f);
-        doors.GetComponent<ElevatorDoors>().Interact(false);
-    }
 
+    private IEnumerator LoadMap()
+    {
+        anim.SetTrigger("Close");
+        yield return new WaitForSeconds(2f);
+        ChangeMap(Maps[epoca]);
+        yield return new WaitForSeconds(5f);
+        anim.SetTrigger("Open");
+        yield return new WaitForSeconds(10f);
+        anim.SetTrigger("Close");
+    }
+    private IEnumerator CloseDoors()
+    {
+        yield return new WaitForSeconds(10f);
+        anim.SetTrigger("Close");
+    }
     public void Interact(bool activate)
     {
+        if(activate) SoundManager.playButton();
         if(first_time){
-            LoadScene(1);
-            StartCoroutine(openDoors());
+            anim.SetTrigger("Open");
+            StartCoroutine(CloseDoors());
+            first_time = false;
         }
-        else{codeInputPanel.SetActive(!codeInputPanel.activeSelf);}
+        else if(activate){codeInputPanel.SetActive(!codeInputPanel.activeSelf);}
     }
     public void CheckCode()
     {

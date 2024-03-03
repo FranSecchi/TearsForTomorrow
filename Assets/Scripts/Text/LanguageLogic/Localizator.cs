@@ -29,9 +29,17 @@ public class Localizator : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
-        _currentLanguage = DefaultLanguage;
-        ReadSheet();
+        if (Instance == null)
+        {
+
+            _currentLanguage = DefaultLanguage;
+            ReadSheet();
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
 

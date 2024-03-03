@@ -10,7 +10,8 @@ public class PanelManager : MonoBehaviour
 
     void Start(){
         escapePanel.SetActive(false);
-        inventoryPanel.SetActive(false);
+        if (inventoryPanel != null)
+            inventoryPanel.SetActive(false);
     }
 
     // Update is called once per frame

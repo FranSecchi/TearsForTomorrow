@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameSlot gameSlot;
     public static GameManager instance = null;
     private DataPersistenceManager dataManager;
-
+    public LoadSceneAsync sceneLoader;
     public Transform player;
     private Camera currentCamera;
     private List<Saveable> salvables;
@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
         {
 
             instance = this;
+            sceneLoader = GetComponent<LoadSceneAsync>();
             GameObject go = new GameObject("GameDataManager");
             dataManager = go.AddComponent<DataPersistenceManager>();
             currentCamera = Camera.main;
@@ -65,14 +66,14 @@ public class GameManager : MonoBehaviour
     public void LoadGame(GameSlot slot)
     {
         gameSlot = slot;
-        SceneManager.LoadScene("NewScene");
+        sceneLoader.LoadScene("NewScene");
     }
 
     internal void LoadNewGame(GameSlot slot)
     {
         gameSlot = slot;
         dataManager.NewGame(gameSlot);
-        SceneManager.LoadScene("NewScene");
+        sceneLoader.LoadScene("NewScene");
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {

@@ -652,6 +652,10 @@ PrefabInstance:
       value: Mapa_Present
       objectReference: {fileID: 0}
     - target: {fileID: 6809701711971964218, guid: 58783dda537068d4286872cfb31728f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809701711971964218, guid: 58783dda537068d4286872cfb31728f6, type: 3}
       propertyPath: m_TagString
       value: Ascensor
       objectReference: {fileID: 0}
