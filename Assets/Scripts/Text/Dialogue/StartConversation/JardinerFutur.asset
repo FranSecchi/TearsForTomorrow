@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0978305953ac01049aaecfeb9cea18f6, type: 3}
-  m_Name: SaludoRecepcionista
+  m_Name: JardinerFutur
   m_EditorClassIdentifier: 
-  Name: Walt
-  StartNode: {fileID: 11400000, guid: a670eacebd65d1d409eb5877b333ddbf, type: 2}
+  Name: "Jos\xE9 Romero"
+  StartNode: {fileID: 11400000, guid: bc712319529b60a4c8dd6497cfe2f0f3, type: 2}
