@@ -28,5 +28,6 @@ public class GameData
         btnInPlace = false;
         btnActive = false;
         amaOpen = false;
+        epoca = 1;
 }
 }
