@@ -20,7 +20,8 @@ public class Item : MonoBehaviour, Interactuable, Collectable
     }
     private void OnEnable()
     {
-        InteractPanel.SetActive(false);
+        if (InteractPanel != null)
+            InteractPanel.SetActive(false);
     }
     public void Interact(bool activate)
     {
