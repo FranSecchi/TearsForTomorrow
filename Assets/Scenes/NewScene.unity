@@ -1208,7 +1208,7 @@ PrefabInstance:
     - target: {fileID: 3664626114220387597, guid: bfc7f4d9a1ce3004ea1b433369597842, type: 3}
       propertyPath: ViewToClick
       value: 
-      objectReference: {fileID: 1757126638}
+      objectReference: {fileID: 1757126639}
     - target: {fileID: 4032089941796630871, guid: bfc7f4d9a1ce3004ea1b433369597842, type: 3}
       propertyPath: m_Name
       value: "Bot\xF3Ascensor"
@@ -1217,6 +1217,34 @@ PrefabInstance:
       propertyPath: _anim
       value: 
       objectReference: {fileID: 1225449091}
+    - target: {fileID: 6387745466984521994, guid: bfc7f4d9a1ce3004ea1b433369597842, type: 3}
+      propertyPath: m_Size.x
+      value: 0.15081978
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387745466984521994, guid: bfc7f4d9a1ce3004ea1b433369597842, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2352984
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387745466984521994, guid: bfc7f4d9a1ce3004ea1b433369597842, type: 3}
+      propertyPath: m_Size.z
+      value: 0.2784617
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387745466984521994, guid: bfc7f4d9a1ce3004ea1b433369597842, type: 3}
+      propertyPath: m_Center.x
+      value: -0.005982399
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387745466984521994, guid: bfc7f4d9a1ce3004ea1b433369597842, type: 3}
+      propertyPath: m_Center.y
+      value: -0.17547715
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387745466984521994, guid: bfc7f4d9a1ce3004ea1b433369597842, type: 3}
+      propertyPath: m_Center.z
+      value: 0.100731015
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387745466984521994, guid: bfc7f4d9a1ce3004ea1b433369597842, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6809701711971964218, guid: bfc7f4d9a1ce3004ea1b433369597842, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1575,6 +1603,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ad197316c94a0af4899ffe73c598bf73, type: 2}
+    - target: {fileID: 4888506729536711244, guid: e1b6025233f710341b58b0b49705b78e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4982939290106478749, guid: e1b6025233f710341b58b0b49705b78e, type: 3}
       propertyPath: m_TagString
       value: Ascensor
@@ -2683,11 +2715,6 @@ PrefabInstance:
       addedObject: {fileID: 1753349314}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9abb0bbb1f416a41a0a1ae8b09fedc7, type: 3}
---- !u!20 &1757126638 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 5397135559576529182, guid: d9abb0bbb1f416a41a0a1ae8b09fedc7, type: 3}
-  m_PrefabInstance: {fileID: 1757126637}
-  m_PrefabAsset: {fileID: 0}
 --- !u!20 &1757126639 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2867090022895963525, guid: d9abb0bbb1f416a41a0a1ae8b09fedc7, type: 3}
