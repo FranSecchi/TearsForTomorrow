@@ -162,6 +162,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jardiner Adult
       objectReference: {fileID: 0}
+    - target: {fileID: 596784264355163908, guid: 541668df079a5904c8f0901e93fcb762, type: 3}
+      propertyPath: talker
+      value: 
+      objectReference: {fileID: 4410828354973675288}
     - target: {fileID: 3174400118186586751, guid: 541668df079a5904c8f0901e93fcb762, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0041799545
@@ -207,6 +211,11 @@ PrefabInstance:
 --- !u!4 &2197051465975681868 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 292024877620008081, guid: 541668df079a5904c8f0901e93fcb762, type: 3}
+  m_PrefabInstance: {fileID: 1905028959446583261}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4410828354973675288 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2830068962535434437, guid: 541668df079a5904c8f0901e93fcb762, type: 3}
   m_PrefabInstance: {fileID: 1905028959446583261}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2375995228313747599
@@ -293,6 +302,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mestressa Adult
       objectReference: {fileID: 0}
+    - target: {fileID: 596784264355163908, guid: adaa8cd197e005d4cb9a11d3aec0773f, type: 3}
+      propertyPath: talker
+      value: 
+      objectReference: {fileID: 3323599819625343039}
     - target: {fileID: 5687726030056890423, guid: adaa8cd197e005d4cb9a11d3aec0773f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.725
@@ -310,6 +323,11 @@ PrefabInstance:
 --- !u!4 &2662823676003750942 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 292024877620008081, guid: adaa8cd197e005d4cb9a11d3aec0773f, type: 3}
+  m_PrefabInstance: {fileID: 2375995228313747599}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3323599819625343039 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1073817686342379696, guid: adaa8cd197e005d4cb9a11d3aec0773f, type: 3}
   m_PrefabInstance: {fileID: 2375995228313747599}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2718469189761820429
@@ -364,6 +382,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Propietari Adult
       objectReference: {fileID: 0}
+    - target: {fileID: 596784264355163908, guid: 5bbc3fd435f752241b2361223fce55bf, type: 3}
+      propertyPath: talker
+      value: 
+      objectReference: {fileID: 1592081007628048108}
     - target: {fileID: 5687726030056890423, guid: 5bbc3fd435f752241b2361223fce55bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.1
@@ -378,6 +400,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bbc3fd435f752241b2361223fce55bf, type: 3}
+--- !u!1 &1592081007628048108 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3720470748033724897, guid: 5bbc3fd435f752241b2361223fce55bf, type: 3}
+  m_PrefabInstance: {fileID: 2718469189761820429}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2428718136817021852 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 292024877620008081, guid: 5bbc3fd435f752241b2361223fce55bf, type: 3}
