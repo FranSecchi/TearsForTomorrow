@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0978305953ac01049aaecfeb9cea18f6, type: 3}
   m_Name: RosaStart
   m_EditorClassIdentifier: 
-  Name: Rosa
-  StartNode: {fileID: 0}
+  Name: Rosa de Alabastro
+  StartNode: {fileID: 11400000, guid: 1b13442f967bb294fab26fe79923d95d, type: 2}

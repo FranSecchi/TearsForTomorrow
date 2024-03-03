@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0978305953ac01049aaecfeb9cea18f6, type: 3}
   m_Name: JardinerPala
   m_EditorClassIdentifier: 
-  Name: nJardiner
+  Name: "Jos\xE9 Romero"
   StartNode: {fileID: 11400000, guid: 8f82bfb0c7c23b849bb2f441c2f83657, type: 2}

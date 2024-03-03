@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: IntroRecepPassat
   m_EditorClassIdentifier: 
   Name: A. Lettuce
-  StartNode: {fileID: 11400000, guid: f61258cfa30d2a142866b5cb70a5882d, type: 2}
+  StartNode: {fileID: 11400000, guid: 60467edd7a592754ea2c6580449c1977, type: 2}

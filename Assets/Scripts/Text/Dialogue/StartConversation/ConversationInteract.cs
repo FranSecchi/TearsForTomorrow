@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class ConversationInteract : MonoBehaviour,Interactuable
+public class ConversationInteract : CameraController,Interactuable
 {
     public Conversation NewConversation;
     public DialogueManager DialogueManager;
@@ -17,6 +17,19 @@ public class ConversationInteract : MonoBehaviour,Interactuable
 
     public void Interact(bool activate)
     {
+        if (activate)
+        {
+            gm.CurrentCamera = thisCamera;
+            lastCamera.enabled = false;
+            thisCamera.enabled = true;
+            //lastCamera = thisCamera;
+        }
+        else
+        {
+            lastCamera.gameObject.GetComponent<Camera>().enabled = true;
+            thisCamera.gameObject.GetComponent<Camera>().enabled = false;
+            gm.CurrentCamera = lastCamera;
+        }
         if (activate)
             DialogueManager.StartConversation(NewConversation, talker);
         else

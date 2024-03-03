@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0978305953ac01049aaecfeb9cea18f6, type: 3}
   m_Name: BuganvillaPresent
   m_EditorClassIdentifier: 
-  Name: B
+  Name: Guillermo de Buganvilla
   StartNode: {fileID: 11400000, guid: 310ea956ec197c54dba1ec76bb070a44, type: 2}
