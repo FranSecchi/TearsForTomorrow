@@ -1017,6 +1017,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 637696139136610934, guid: b9627dd9addf70c43b8b6adaf600a5bc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 927138201636296438, guid: b9627dd9addf70c43b8b6adaf600a5bc, type: 3}
       propertyPath: talker
       value: 
@@ -1073,6 +1077,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3879717157033910927, guid: b9627dd9addf70c43b8b6adaf600a5bc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879717157033910927, guid: b9627dd9addf70c43b8b6adaf600a5bc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879717157033910927, guid: b9627dd9addf70c43b8b6adaf600a5bc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879717157033910927, guid: b9627dd9addf70c43b8b6adaf600a5bc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879717157033910927, guid: b9627dd9addf70c43b8b6adaf600a5bc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879717157033910927, guid: b9627dd9addf70c43b8b6adaf600a5bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322341349563898928, guid: b9627dd9addf70c43b8b6adaf600a5bc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5119875958018408979, guid: b9627dd9addf70c43b8b6adaf600a5bc, type: 3}
       propertyPath: m_Name
       value: PrefabPassat
@@ -1089,6 +1121,10 @@ PrefabInstance:
       propertyPath: DialogueManager
       value: 
       objectReference: {fileID: 245383177}
+    - target: {fileID: 7265430859890395772, guid: b9627dd9addf70c43b8b6adaf600a5bc, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8345336255987795105, guid: b9627dd9addf70c43b8b6adaf600a5bc, type: 3}
       propertyPath: thisCamera
       value: 
