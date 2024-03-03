@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 596784264355163908}
   - component: {fileID: 4491688871898601503}
   - component: {fileID: 4284093217124937678}
+  - component: {fileID: -1311540969142477324}
   m_Layer: 6
   m_Name: Jardiner Vell
   m_TagString: Untagged
@@ -210,6 +211,7 @@ MonoBehaviour:
   DialogueManager: {fileID: 0}
   StandPosition: {fileID: 5687726030056890423}
   talker: {fileID: 0}
+  Repeat: {fileID: 0}
 --- !u!136 &4491688871898601503
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -248,6 +250,25 @@ MonoBehaviour:
   convo: {fileID: 596784264355163908}
   newConvo: {fileID: 11400000, guid: 8803862929d89ef489378f658482f74a, type: 2}
   itemKey: nShovel
+--- !u!114 &-1311540969142477324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515107819511609645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &1742116432510356421
 GameObject:
   m_ObjectHideFlags: 0

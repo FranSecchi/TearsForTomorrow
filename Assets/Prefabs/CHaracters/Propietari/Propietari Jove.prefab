@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 292024877620008081}
   - component: {fileID: 5739499750635850099}
   - component: {fileID: 4491688871898601503}
+  - component: {fileID: -8528951966756974244}
   m_Layer: 6
   m_Name: Propietari Jove
   m_TagString: Untagged
@@ -162,7 +163,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.700985, y: 0.084, z: -0.20112395}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.24, y: 1.24, z: 1.24}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1958522931848681888}
@@ -215,6 +216,25 @@ CapsuleCollider:
   m_Height: 1.4167317
   m_Direction: 1
   m_Center: {x: -0.012642384, y: 0.72921926, z: 0}
+--- !u!114 &-8528951966756974244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515107819511609645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &1742116432510356421
 GameObject:
   m_ObjectHideFlags: 0
