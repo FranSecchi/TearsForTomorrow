@@ -1283,6 +1283,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ascensor
       objectReference: {fileID: 0}
+    - target: {fileID: 457375189222916333, guid: e1b6025233f710341b58b0b49705b78e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.91
+      objectReference: {fileID: 0}
     - target: {fileID: 522755002263921897, guid: e1b6025233f710341b58b0b49705b78e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1418,8 +1422,35 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4888506729536711244, guid: e1b6025233f710341b58b0b49705b78e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1157825263}
   m_SourcePrefab: {fileID: 100100000, guid: e1b6025233f710341b58b0b49705b78e, type: 3}
+--- !u!4 &1157825261 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 457375189222916333, guid: e1b6025233f710341b58b0b49705b78e, type: 3}
+  m_PrefabInstance: {fileID: 1157825260}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1157825262 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4888506729536711244, guid: e1b6025233f710341b58b0b49705b78e, type: 3}
+  m_PrefabInstance: {fileID: 1157825260}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1157825263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157825262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0b9c5d5ddda95c4fa87de2028984d94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisCamera: {fileID: 1757126639}
+  StandPosition: {fileID: 1157825261}
 --- !u!1 &1176298446 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4032089941796630871, guid: bfc7f4d9a1ce3004ea1b433369597842, type: 3}
@@ -1608,6 +1639,10 @@ PrefabInstance:
     - target: {fileID: 969860967653892874, guid: 4955284bd37130b499bc851709e6c062, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3233927899623860417, guid: 4955284bd37130b499bc851709e6c062, type: 3}
+      propertyPath: InteractPanel
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3592930524448841970, guid: 4955284bd37130b499bc851709e6c062, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2117,6 +2152,11 @@ PrefabInstance:
 --- !u!20 &1757126638 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 5397135559576529182, guid: d9abb0bbb1f416a41a0a1ae8b09fedc7, type: 3}
+  m_PrefabInstance: {fileID: 1757126637}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1757126639 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2867090022895963525, guid: d9abb0bbb1f416a41a0a1ae8b09fedc7, type: 3}
   m_PrefabInstance: {fileID: 1757126637}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1763740054
