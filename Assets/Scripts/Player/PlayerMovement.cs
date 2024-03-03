@@ -36,11 +36,7 @@ public class PlayerMovement : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject())
             return;
         if (agent.velocity != Vector3.zero){
-            stepSound.start();
             transform.eulerAngles = new Vector3(0, Quaternion.LookRotation(agent.velocity - Vector3.zero).eulerAngles.y, 0);
-        }
-        else{
-            stepSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
         MouseInput();
         
@@ -130,7 +126,4 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void OnDisable(){
-        stepSound.release();
-    }
 }
