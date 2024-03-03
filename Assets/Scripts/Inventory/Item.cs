@@ -26,7 +26,7 @@ public class Item : MonoBehaviour, Interactuable, Collectable
     {
         if (ViewToClick != null && !ViewToClick.enabled)
             return;
-        InteractPanel.SetActive(activate);
+        if (InteractPanel != null) InteractPanel.SetActive(activate);
     }
     public void Collect()
     {
