@@ -3,14 +3,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cofre : MonoBehaviour, Usable
+public class Cofre : MonoBehaviour, Usable, Saveable
 {
     public ItemInfo llibreta; 
     public ItemInfo espelma;
     public GameObject inventory;
+    private bool opened = false;
+    private void Awake()
+    {
+        GameManager.instance.AddSaveable(GetComponent<Saveable>());
+    }
+    public void Load(GameData gameData)
+    {
+        opened = gameData.cofreOpened;
+    }
+
+    public void Save(ref GameData gameData)
+    {
+        gameData.cofreOpened = opened;
+    }
+
     public bool Use(GameObject item)
     {
-        if (item.GetComponent<Item>()._info.nameKey.Equals(Parameter.Str_CofreKey))
+        if (item.GetComponent<Item>()._info.nameKey.Equals(Parameter.Str_CofreKey) && !opened)
         {
             OpenCofre();
             return true;
@@ -19,6 +34,7 @@ public class Cofre : MonoBehaviour, Usable
     }
     private void OpenCofre()
     {
+        opened = true;
         Inventory.instance.Add(llibreta);
         Inventory.instance.Add(espelma);
         inventory.SetActive(true);

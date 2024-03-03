@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
 
-public class PlayerMovement : MonoBehaviour, Saveable
+public class PlayerMovement : MonoBehaviour
 {
     public LayerMask whatCanBeClickedOn;
 
@@ -20,13 +20,6 @@ public class PlayerMovement : MonoBehaviour, Saveable
     public EventReference stepSoundRef;
     private EventInstance stepSound;
 
-
-    // Start is called before the first frame update
-    private void Awake()
-    {
-        _gm = GameManager.instance;
-        _gm.AddSaveable(GetComponent<Saveable>());
-    }
     void Start()
     {
         stepSound = RuntimeManager.CreateInstance(stepSoundRef);
@@ -135,17 +128,6 @@ public class PlayerMovement : MonoBehaviour, Saveable
         }
     }
 
-    public void Save(ref GameData gameData)
-    {
-        gameData.playerPos = transform.position;
-        gameData.playerForward = transform.forward; 
-    }
-
-    public void Load(GameData gameData)
-    {
-        transform.position = gameData.playerPos;
-        transform.forward = gameData.playerForward;
-    }
     void OnDisable(){
         stepSound.release();
     }

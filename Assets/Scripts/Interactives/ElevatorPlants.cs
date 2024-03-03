@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
 
-public class ElevatorPlants : MonoBehaviour, Interactuable
+public class ElevatorPlants : MonoBehaviour, Interactuable, Saveable
 {
     private bool first_time = true;
     public GameObject current;
@@ -16,6 +16,10 @@ public class ElevatorPlants : MonoBehaviour, Interactuable
     public TMP_InputField codeInputField;
     public Animator anim;
     private int epoca;
+    private void Awake()
+    {
+        GameManager.instance.AddSaveable(GetComponent<Saveable>());
+    }
     private void Start()
     {
         Panel.SetActive(false);
@@ -79,6 +83,17 @@ public class ElevatorPlants : MonoBehaviour, Interactuable
     public Transform getStandPosition()
     {
         return StandPoint;
+    }
+
+    public void Save(ref GameData gameData)
+    {
+        gameData.epoca = epoca;
+    }
+
+    public void Load(GameData gameData)
+    {
+        epoca = gameData.epoca;
+        LoadScene(epoca);
     }
     //IEnumerator LoadAsync(string scene)
     //{
