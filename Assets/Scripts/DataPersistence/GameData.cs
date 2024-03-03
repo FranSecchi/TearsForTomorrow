@@ -13,7 +13,8 @@ public class GameData
     public bool elevatorOpen;
     public int epoca;
     public bool btnInPlace;
-    internal bool btnActive;
+    public bool btnActive;
+    public bool amaOpen;
 
     //public Vector3 position;
     //public Vector3 rotation;
@@ -25,6 +26,7 @@ public class GameData
         playerForward = Vector3.forward;
         cofreOpened = false;
         btnInPlace = false;
-        btnActive = true;
+        btnActive = false;
+        amaOpen = false;
 }
 }

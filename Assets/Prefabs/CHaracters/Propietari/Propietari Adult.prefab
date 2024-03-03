@@ -209,6 +209,7 @@ MonoBehaviour:
   DialogueManager: {fileID: 0}
   StandPosition: {fileID: 5687726030056890423}
   talker: {fileID: 0}
+  Repeat: {fileID: 0}
 --- !u!136 &4491688871898601503
 CapsuleCollider:
   m_ObjectHideFlags: 0
