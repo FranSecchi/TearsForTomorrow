@@ -45,7 +45,6 @@ public class ElevatorPlants : MonoBehaviour, Interactuable
     public void Interact(bool activate)
     {
         if(first_time){
-            LoadScene(1);
             anim.SetTrigger("Open");
             first_time = false;
         }

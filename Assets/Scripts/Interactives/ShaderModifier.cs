@@ -20,10 +20,8 @@ public class ShaderModifier : MonoBehaviour
         changeShader(Times.Present);
     }
     void FindAllObjects(){
-        List<GameObject> rootObjects = new List<GameObject>();
-        Scene scene = SceneManager.GetActiveScene();
-        scene.GetRootGameObjects( rootObjects );
-        foreach(GameObject obj in rootObjects){
+        List<GameObject>Objects = FindObjectsOfType<GameObject>().ToList();
+        foreach(GameObject obj in Objects){
             Material mat;
             MeshRenderer mesh;
             if(obj.TryGetComponent(out mesh)){
@@ -40,6 +38,7 @@ public class ShaderModifier : MonoBehaviour
     }
 
     public static void changeShader(Times time){
+        Debug.Log(time.ToString());
         foreach(Material mat in materials){
             switch(time){
                 case Times.Past:
