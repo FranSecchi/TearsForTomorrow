@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        _gm = GameManager.instance;
         stepSound = RuntimeManager.CreateInstance(stepSoundRef);
         agent = GetComponent<NavMeshAgent>();
         interacting = false;

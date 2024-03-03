@@ -12,5 +12,6 @@ public abstract class CameraController : MonoBehaviour
         if (lastCamera == null) lastCamera = Camera.main;
         thisCamera.enabled = thisCamera.gameObject.CompareTag("MainCamera");
         gm = GameManager.instance;
+        gm.CurrentCamera = thisCamera;
     }
 }

@@ -1451,6 +1451,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisCamera: {fileID: 1757126639}
   StandPosition: {fileID: 1157825261}
+--- !u!1 &1157825264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 51749107715039262, guid: e1b6025233f710341b58b0b49705b78e, type: 3}
+  m_PrefabInstance: {fileID: 1157825260}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1176298446 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4032089941796630871, guid: bfc7f4d9a1ce3004ea1b433369597842, type: 3}
@@ -1680,6 +1685,10 @@ PrefabInstance:
       propertyPath: current
       value: 
       objectReference: {fileID: 530878906}
+    - target: {fileID: 6588229954596044687, guid: 4955284bd37130b499bc851709e6c062, type: 3}
+      propertyPath: doorMestresa
+      value: 
+      objectReference: {fileID: 1157825264}
     - target: {fileID: 6588229954596044687, guid: 4955284bd37130b499bc851709e6c062, type: 3}
       propertyPath: codeInputField
       value: 
