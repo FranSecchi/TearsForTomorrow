@@ -8,7 +8,7 @@ For this project, as the main developer I focused on the multiple choice dialogu
 I was also in charge of the character's movement and other simple functionalities, like buttons or doors.
 
 Besides, though we decided it was not needed for a GameJam, I made a simple localization system to translate the game to other languages.
-We did not write the translation of the dialogues nor the multiple texts, but I used the opportunity to implement and learn localization, using excel to write the diferent translations.
+We did not write the translation of the dialogues nor the multiple texts, but I used the opportunity to implement and learn localization, parsing an excel with the diferent translations.
 
 Check it in my itch.io!
 https://franysan.itch.io/
